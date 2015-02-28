@@ -3,14 +3,11 @@ using System.Collections;
 
 public class EnemyScript : MonoBehaviour {
 
-    public bool canMove;
     public Movement mouvements;
 	public int range;
 	public int damage;
+    public HeroScript hero;
 
-
-
-    private SpriteRenderer spriteRenderer;
     private GameObject enemy;
 	private bool spawned;
 
@@ -22,42 +19,54 @@ public class EnemyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        /*if (spawned)
-        {
-            int posX = mouvements.posX;
-            int posY = mouvements.posY;
-
-            if (Input.GetAxis("Horizontal") == 1)
-            {
-                mouvements.Move('d', posX, posY);
-            }
-
-            if (Input.GetAxis("Horizontal") == -1)
-            {
-                mouvements.Move('g', posX, posY);
-            }
-
-            if (Input.GetAxis("Vertical") == 1)
-            {
-                mouvements.Move('h', posX, posY);
-            }
-
-            if (Input.GetAxis("Vertical") == -1)
-            {
-                mouvements.Move('b', posX, posY);
-            }
-        }
-        */
+        
 	}
 
 	public void Move()
 	{
-		int posX = mouvements.posX;
-		int posY = mouvements.posY;
-		mouvements.Move('d', posX, posY);
+        if (spawned)
+        {
+            bool enemiADroite = mouvements.posX > hero.mouvements.posX;
+            bool enemiEnHaut = mouvements.posY > hero.mouvements.posY;
+            int distance = getDistance(enemiADroite);
+
+            if (distance > 1)
+            {
+                if (enemiADroite)
+                {
+                    if (isThereObstacle('d'))
+                        mouvements.Move('d', mouvements.posX, mouvements.posY);
+                }
+                else
+                {
+                    if (isThereObstacle('g'))
+                        mouvements.Move('g', mouvements.posX, mouvements.posY);
+                }
+            }
+            else
+            {
+                if (hero.mouvements.posY == mouvements.posY || hero.mouvements.posX == mouvements.posX)
+                {
+                    tire actionEnnemi = this.GetComponent<tire>();
+
+                    Debug.Log("L'ennemi attaque");
+                }
+                else
+                {
+                    if (enemiEnHaut)
+                    {
+                        if (isThereObstacle('h'))
+                            mouvements.Move('h', mouvements.posX, mouvements.posY);
+                    }
+                    else
+                    {
+                        if (isThereObstacle('b'))
+                            mouvements.Move('b', mouvements.posX, mouvements.posY);
+                    }
+                }
+            }
+        }
 	}
-
-
 
     public void DansLaChampDeLaCamera()
     {
@@ -65,5 +74,57 @@ public class EnemyScript : MonoBehaviour {
         {
             spawned = true;
         }
+    }
+
+    private int getDistance(bool enemiEnAvant)
+    {
+        int distance;
+
+        if (enemiEnAvant)
+            distance = mouvements.posX - hero.mouvements.posX;
+        else
+            distance = hero.mouvements.posX - mouvements.posX;
+
+        return distance;
+    }
+
+    private bool isThereObstacle(char direction)
+    {
+        bool isObstacle;
+        int x = mouvements.posX;
+        int y = mouvements.posY;
+
+        switch(direction)
+        {
+            case 'h':
+                    isObstacle = isCaseObstable(x, y + 1);
+                break;
+
+            case 'b':
+                    isObstacle = isCaseObstable(x, y - 1);
+                break;
+
+            case 'd':
+                isObstacle = isCaseObstable(x + 1, y);
+                break;
+
+            case 'g':
+                isObstacle = isCaseObstable(x - 1, y);
+                break;
+
+            default:
+                isObstacle = false;
+                break;
+        }
+
+        return isObstacle;
+    }
+
+    private bool isCaseObstable(int x, int y)
+    {
+        bool isObstacle;
+
+        isObstacle = mouvements.Script.tableauCases[x, y + 1].GetCase() == EtatCase.Obstacle || mouvements.Script.tableauCases[x, y + 1].GetCase() == EtatCase.HalfObstacle;
+        return isObstacle;
     }
 }
