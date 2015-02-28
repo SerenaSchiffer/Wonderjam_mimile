@@ -5,6 +5,8 @@ public class HeroScript : MonoBehaviour {
 	public bool canMove;
 	public Movement mouvements;
 	public turn_Manager turn;
+=======
+	turn_Manager turn = new turn_Manager();
 	//public GameObject scriptCountainer;
 	// Use this for initialization
 	void Start () {
@@ -30,7 +32,9 @@ public class HeroScript : MonoBehaviour {
 					canMove=false;
 					turn.tour (false);
 				}
-
+				mouvements.Move('d',posX,posY);
+				canMove=false;
+				//turn.tour_Hero();
 			}
 			if(Input.GetAxis ("Horizontal") == -1)
 			{
@@ -40,6 +44,7 @@ public class HeroScript : MonoBehaviour {
 				canMove=false;
 				turn.tour (false);
 				}
+				//turn.tour_Hero();
 			}
 			if(Input.GetAxis ("Vertical") == 1)
 			{
@@ -49,6 +54,7 @@ public class HeroScript : MonoBehaviour {
 				canMove=false;
 				turn.tour (false);
 				}
+				//turn.tour_Hero();
 			}
 			if(Input.GetAxis ("Vertical") == -1)
 			{
@@ -58,6 +64,7 @@ public class HeroScript : MonoBehaviour {
 				canMove=false;
 				turn.tour (false);
 				}
+				//turn.tour_Hero();
 			}
 		}
 
