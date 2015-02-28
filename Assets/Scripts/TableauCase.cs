@@ -19,9 +19,12 @@ public class TableauCase : MonoBehaviour {
 	void Start () {
         tableauCases = new Case[50, 3];
 
-        foreach (Case cell in tableauCases)
+        for (int i = 0; i < 50; i++)
         {
-            cell = new Case(EtatCase.Empty);
+            for (int j = 0; j < 3; j++)
+            {
+                tableauCases[i, j] = new Case(EtatCase.Empty);
+            }
         }
 	}
 	
