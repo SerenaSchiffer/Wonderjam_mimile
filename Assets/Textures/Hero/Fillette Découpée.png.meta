@@ -1,7 +1,51 @@
 fileFormatVersion: 2
 guid: 73a5e5a501b2fac46aa5a396e2a889a9
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: st1_leftarm
+    21300002: st1_body
+    21300004: st1_rightarm
+    21300006: st1_hips
+    21300008: st1_legleft
+    21300010: st1_legright
+    21300012: st1_head
+    21300014: st1_hairright
+    21300016: st1_hairleft
+    21300018: st1_hairtop
+    21300020: st1_mouth
+    21300022: st1_eyeright
+    21300024: st1_eyebright
+    21300026: st1_eyebleft
+    21300028: st1_eyeleft
+    21300030: st1_blushleft
+    21300032: st1_blushright
+    21300034: st2_hairleft
+    21300036: st2_hairtop
+    21300038: st2_hairright
+    21300040: st2_eyebrows
+    21300042: st2_eyesClosed
+    21300044: st2_eyesOpen
+    21300046: st2_mouth
+    21300048: st2_head
+    21300050: st2_body
+    21300052: st2_armright
+    21300054: st2_armleft
+    21300056: st2_hips
+    21300058: st2_legleft
+    21300060: st2_legright
+    21300062: st3_hairleft
+    21300064: st3_hairtop
+    21300066: st3_hairright
+    21300068: st3_head
+    21300070: st3_eyesOpen
+    21300072: st3_eyesClosed
+    21300074: st3_armright
+    21300076: st3_body
+    21300078: st3_armleft
+    21300080: st3_hips
+    21300082: st3_mouth
+    21300084: st3_legleft
+    21300086: st3_legright
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -27,7 +71,7 @@ TextureImporter:
     filterMode: -1
     aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -42,6 +86,446 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: st1_leftarm
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 515
+        width: 187
+        height: 200
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_body
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 595
+        width: 216
+        height: 247
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_rightarm
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 587
+        width: 194
+        height: 225
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_hips
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 335
+        width: 314
+        height: 161
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_legleft
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 64
+        width: 154
+        height: 234
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_legright
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 62
+        width: 171
+        height: 234
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_head
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 925
+        width: 268
+        height: 259
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_hairright
+      rect:
+        serializedVersion: 2
+        x: 513
+        y: 907
+        width: 169
+        height: 259
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_hairleft
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1168
+        width: 155
+        height: 275
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_hairtop
+      rect:
+        serializedVersion: 2
+        x: 319
+        y: 1275
+        width: 331
+        height: 289
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_mouth
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 1144
+        width: 98
+        height: 62
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_eyeright
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1312
+        width: 46
+        height: 40
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_eyebright
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 1358
+        width: 45
+        height: 36
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_eyebleft
+      rect:
+        serializedVersion: 2
+        x: 675
+        y: 1351
+        width: 63
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_eyeleft
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 1313
+        width: 65
+        height: 38
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_blushleft
+      rect:
+        serializedVersion: 2
+        x: 660
+        y: 1286
+        width: 59
+        height: 22
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st1_blushright
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 1288
+        width: 36
+        height: 27
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st2_hairleft
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 1191
+        width: 169
+        height: 287
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st2_hairtop
+      rect:
+        serializedVersion: 2
+        x: 1114
+        y: 1195
+        width: 294
+        height: 286
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st2_hairright
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 1193
+        width: 176
+        height: 292
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st2_eyebrows
+      rect:
+        serializedVersion: 2
+        x: 939
+        y: 1101
+        width: 172
+        height: 52
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st2_eyesClosed
+      rect:
+        serializedVersion: 2
+        x: 942
+        y: 1010
+        width: 164
+        height: 74
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st2_eyesOpen
+      rect:
+        serializedVersion: 2
+        x: 954
+        y: 898
+        width: 145
+        height: 66
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st2_mouth
+      rect:
+        serializedVersion: 2
+        x: 970
+        y: 785
+        width: 125
+        height: 64
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st2_head
+      rect:
+        serializedVersion: 2
+        x: 1217
+        y: 897
+        width: 262
+        height: 253
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st2_body
+      rect:
+        serializedVersion: 2
+        x: 1233
+        y: 609
+        width: 176
+        height: 209
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st2_armright
+      rect:
+        serializedVersion: 2
+        x: 1447
+        y: 632
+        width: 161
+        height: 202
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st2_armleft
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 564
+        width: 183
+        height: 184
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st2_hips
+      rect:
+        serializedVersion: 2
+        x: 1103
+        y: 389
+        width: 330
+        height: 140
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st2_legleft
+      rect:
+        serializedVersion: 2
+        x: 1150
+        y: 64
+        width: 134
+        height: 225
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st2_legright
+      rect:
+        serializedVersion: 2
+        x: 1351
+        y: 61
+        width: 138
+        height: 227
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st3_hairleft
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 1122
+        width: 207
+        height: 297
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st3_hairtop
+      rect:
+        serializedVersion: 2
+        x: 1929
+        y: 1254
+        width: 299
+        height: 261
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st3_hairright
+      rect:
+        serializedVersion: 2
+        x: 2276
+        y: 1126
+        width: 182
+        height: 283
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st3_head
+      rect:
+        serializedVersion: 2
+        x: 1935
+        y: 911
+        width: 272
+        height: 259
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st3_eyesOpen
+      rect:
+        serializedVersion: 2
+        x: 1664
+        y: 909
+        width: 174
+        height: 147
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st3_eyesClosed
+      rect:
+        serializedVersion: 2
+        x: 1673
+        y: 667
+        width: 194
+        height: 175
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st3_armright
+      rect:
+        serializedVersion: 2
+        x: 2283
+        y: 761
+        width: 189
+        height: 225
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st3_body
+      rect:
+        serializedVersion: 2
+        x: 2054
+        y: 599
+        width: 193
+        height: 233
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st3_armleft
+      rect:
+        serializedVersion: 2
+        x: 1760
+        y: 420
+        width: 181
+        height: 197
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st3_hips
+      rect:
+        serializedVersion: 2
+        x: 2046
+        y: 342
+        width: 339
+        height: 195
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st3_mouth
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 196
+        width: 202
+        height: 84
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st3_legleft
+      rect:
+        serializedVersion: 2
+        x: 1939
+        y: 48
+        width: 130
+        height: 236
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: st3_legright
+      rect:
+        serializedVersion: 2
+        x: 2170
+        y: 23
+        width: 105
+        height: 241
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 

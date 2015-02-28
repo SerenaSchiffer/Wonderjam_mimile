@@ -5,7 +5,10 @@ public class HeroScript : MonoBehaviour {
 	public bool canMove;
 	public Movement mouvements;
 	//public GameObject scriptCountainer;
+<<<<<<< HEAD
 	public turn_Manager turn = new turn_Manager();
+=======
+>>>>>>> 26e8c1fdbb8882d71bbba701f962a8dbf36ec6bc
 
 	// Use this for initialization
 	void Start () {
