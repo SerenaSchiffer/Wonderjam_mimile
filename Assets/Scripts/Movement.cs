@@ -5,6 +5,7 @@ public class Movement : MonoBehaviour {
 
 	private const float cellWidth = 1.488f;
 	private const float cellHeight = 0.695f;
+	private const float cellHeightDecal = 0.65f;
 	public int posX = 0;
 	public int posY = 0;
 
@@ -30,7 +31,6 @@ public class Movement : MonoBehaviour {
 	public void Move(char direction, int posXOrigine, int posYOrigine) // Directions possible : h, b, g, d
 	{
 		Case[,] tableauCourant = Script.tableauCases;
-		Debug.Log (tableauCourant[0,0].GetCase());
 		Case origine = tableauCourant[posXOrigine, posYOrigine];
 		Case cible;
 		switch (direction) {
@@ -42,7 +42,7 @@ public class Movement : MonoBehaviour {
 						posY++;
 						origine.SetEtat(EtatCase.Empty);
 						cible.SetEtat(EtatCase.Hero);
-						transform.Translate(new Vector3(0,cellHeight));
+						transform.Translate(new Vector3(cellHeightDecal,cellHeight));
 					}
 					break;
 				}
@@ -54,8 +54,7 @@ public class Movement : MonoBehaviour {
 						posY--;
 						origine.SetEtat(EtatCase.Empty);
 						cible.SetEtat(EtatCase.Hero);
-						//Translate le sprite du hero
-						
+						transform.Translate(new Vector3(-cellHeightDecal,-cellHeight));
 					}
 					break;
 				}
@@ -79,7 +78,7 @@ public class Movement : MonoBehaviour {
 							posX--;
 							origine.SetEtat(EtatCase.Empty);
 							cible.SetEtat(EtatCase.Hero);
-							//Translate le sprite du hero
+							transform.Translate(new Vector3(-cellWidth,0));
 						}
 					break;
 				}

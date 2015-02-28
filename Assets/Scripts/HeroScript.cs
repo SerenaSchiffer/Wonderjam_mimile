@@ -11,7 +11,7 @@ public class HeroScript : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (canMove) 
 		{
 			int posX = mouvements.posX;
@@ -19,6 +19,18 @@ public class HeroScript : MonoBehaviour {
 			if(Input.GetAxis ("Horizontal") == 1)
 			{
 				mouvements.Move('d',posX,posY);
+			}
+			if(Input.GetAxis ("Horizontal") == -1)
+			{
+				mouvements.Move('g',posX,posY);
+			}
+			if(Input.GetAxis ("Vertical") == 1)
+			{
+				mouvements.Move('h',posX,posY);
+			}
+			if(Input.GetAxis ("Vertical") == -1)
+			{
+				mouvements.Move('b',posX,posY);
 			}
 		}
 	}
