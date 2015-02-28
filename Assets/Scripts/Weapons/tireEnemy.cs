@@ -23,7 +23,10 @@ public class tireEnemy : MonoBehaviour {
 	Case[,] tableauCourant;
 	// Use this for initialization
 	void Start () {
-		
+		arme.nom="squirrel";
+		arme.degat=1;
+		arme.distance=1;
+		arme.effet="Degat";
 		
 	}
 	
@@ -40,10 +43,10 @@ public class tireEnemy : MonoBehaviour {
 		case "Degat":{
 			if(hero.mouvements.posX>cible.mouvements.posX) {
 				int dep =hero.mouvements.posX;
-				compare =dep -cible.mouvements.posX;
+				compare =dep -cible.mouvements.posX+1;
 			}else{
 				int dep =cible.mouvements.posX;
-				compare =dep -hero.mouvements.posX;
+				compare =dep -hero.mouvements.posX-1;
 			}
 			if (compare <= arme.distance)
 			{
