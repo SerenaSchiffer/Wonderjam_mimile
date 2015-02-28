@@ -14,8 +14,7 @@ public class Movement : MonoBehaviour {
 
 
 	}
-
-
+/*
 	/// <summary>
 	/// Termine le mouvement entamé
 	/// </summary>
@@ -25,12 +24,12 @@ public class Movement : MonoBehaviour {
 		{
 			case('h')
 			{
-
+				break;
 			}
 
 		}
 
 	}
 
-	*/
+*/
 }
