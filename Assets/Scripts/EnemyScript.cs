@@ -29,18 +29,21 @@ public class EnemyScript : MonoBehaviour {
             bool enemiADroite = mouvements.posX > hero.mouvements.posX;
             bool enemiEnHaut = mouvements.posY > hero.mouvements.posY;
             int distance = getDistance(enemiADroite);
-
             if (distance > 1)
             {
                 if (enemiADroite)
                 {
-                    if (isThereObstacle('d'))
-                        mouvements.Move('d', mouvements.posX, mouvements.posY);
+                    if (!isThereObstacle('g') && mouvements.posX < 49)
+                    {
+                        mouvements.Move('g', mouvements.posX, mouvements.posY);
+                    }
                 }
                 else
                 {
-                    if (isThereObstacle('g'))
-                        mouvements.Move('g', mouvements.posX, mouvements.posY);
+                    if (!isThereObstacle('d') && mouvements.posX > 0)
+                    {
+                        mouvements.Move('d', mouvements.posX, mouvements.posY);
+                    }
                 }
             }
             else
@@ -55,13 +58,14 @@ public class EnemyScript : MonoBehaviour {
                 {
                     if (enemiEnHaut)
                     {
-                        if (isThereObstacle('h'))
-                            mouvements.Move('h', mouvements.posX, mouvements.posY);
+                        
+                        if (!isThereObstacle('b') && mouvements.posY < 2)
+                            mouvements.Move('b', mouvements.posX, mouvements.posY);
                     }
                     else
                     {
-                        if (isThereObstacle('b'))
-                            mouvements.Move('b', mouvements.posX, mouvements.posY);
+                        if (!isThereObstacle('h') && mouvements.posY > 0)
+                            mouvements.Move('h', mouvements.posX, mouvements.posY);
                     }
                 }
             }
@@ -81,10 +85,14 @@ public class EnemyScript : MonoBehaviour {
         int distance;
 
         if (enemiEnAvant)
+        {
             distance = mouvements.posX - hero.mouvements.posX;
+        }
         else
+        {
             distance = hero.mouvements.posX - mouvements.posX;
-
+        }
+        
         return distance;
     }
 
@@ -124,7 +132,7 @@ public class EnemyScript : MonoBehaviour {
     {
         bool isObstacle;
 
-        isObstacle = mouvements.Script.tableauCases[x, y + 1].GetCase() == EtatCase.Obstacle || mouvements.Script.tableauCases[x, y + 1].GetCase() == EtatCase.HalfObstacle;
+        isObstacle = (mouvements.Script.tableauCases[x, y + 1].GetCase() == EtatCase.Obstacle || mouvements.Script.tableauCases[x, y + 1].GetCase() == EtatCase.HalfObstacle);
         return isObstacle;
     }
 }

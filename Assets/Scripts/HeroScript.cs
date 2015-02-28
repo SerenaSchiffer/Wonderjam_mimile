@@ -19,8 +19,9 @@ public class HeroScript : MonoBehaviour {
 
 	// Update is called once per frame
 	void FixedUpdate () {
+        
 		if (canMove) 
-		{
+		{            
 			int posX = mouvements.posX;
 			int posY = mouvements.posY;
 			bool resultat;

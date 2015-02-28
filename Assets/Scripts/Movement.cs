@@ -78,7 +78,7 @@ public class Movement : MonoBehaviour {
 			case('d'):
 				{
 					if(posX<49)
-					{
+                    {
 						cible = tableauCourant[posXOrigine+1, posYOrigine];
 						if(verifMove(cible))
 							{	
@@ -123,6 +123,7 @@ public class Movement : MonoBehaviour {
 				isMoving=false;
 				HeroScript hero = GameObject.FindObjectOfType<HeroScript>();
 				hero.turn.tour(!isHero);
+                isHero = !isHero;
 			}
 		}
 
