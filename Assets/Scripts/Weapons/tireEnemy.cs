@@ -38,7 +38,7 @@ public class tireEnemy : MonoBehaviour {
 		{
 		case "Degat":{
 			int dep =hero.mouvements.posX;
-			int compare =dep -cible.mouvements.posX;
+			int compare =dep -cible.mouvements.posX+1;
 			if (compare <= arme.distance)
 			{
 				if(hero.mouvements.posY==cible.mouvements.posY)
