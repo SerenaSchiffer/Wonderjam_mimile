@@ -26,7 +26,7 @@ public class tire : MonoBehaviour {
 	void Update () {
 	
 	}
-    public bool tirer(HeroScript hero/*vie de la cible*/, EnemyScript cible)
+    public bool tirer(HeroScript hero, EnemyScript cible)
     {
 		tableauCourant = hero.mouvements.Script.tableauCases;
         switch(arme.effet)
@@ -37,7 +37,7 @@ public class tire : MonoBehaviour {
                 if (compare <= arme.distance)
                {
 				if(hero.mouvements.posY==cible.mouvements.posY){
-	                   for (int cpt = 0; cpt < arme.distance; cpt++)
+	                   for (int cpt = 1; cpt <= arme.distance; cpt++)
 		                 {
 							if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
 		                     {
@@ -122,7 +122,7 @@ public class tire : MonoBehaviour {
         {
             case "Degat":{
 				health=cible.GetComponent<HealthScript>();
-				health.hp -= arme.degat;
+				health.Damage (arme.degat);
 
                
                 break;
@@ -149,7 +149,7 @@ public class tire : MonoBehaviour {
             case "roche":{
                 arme.nom="roche";
                 arme.degat=1;
-                arme.distance=2;
+                arme.distance=1;
                 arme.effet="Degat";
                 break;
             }

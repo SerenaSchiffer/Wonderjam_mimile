@@ -135,4 +135,13 @@ public class EnemyScript : MonoBehaviour {
         isObstacle = (mouvements.Script.tableauCases[x, y + 1].GetCase() == EtatCase.Obstacle || mouvements.Script.tableauCases[x, y + 1].GetCase() == EtatCase.HalfObstacle);
         return isObstacle;
     }
+
+	public void OnMouseUp()
+	{
+		HeroScript hero = GameObject.FindObjectOfType<HeroScript> ();
+		hero.shooter.changerArme ("roche");
+		Debug.Log (hero.shooter.tirer (hero, this));
+
+	}
+
 }

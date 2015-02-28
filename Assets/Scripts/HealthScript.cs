@@ -11,8 +11,9 @@ public class HealthScript : MonoBehaviour {
 	public void Damage(int damage)
 	{
 		hp -= damage;
-
-		healthBarSlider.value -= 1;  //reduce health
+		if (healthBarSlider != null) {
+			healthBarSlider.value -= 1;  //reduce health
+		}
 
 		if (hp <= 0) 
 		{
