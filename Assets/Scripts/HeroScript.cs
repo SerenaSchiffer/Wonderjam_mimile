@@ -5,7 +5,6 @@ public class HeroScript : MonoBehaviour {
 	public bool canMove;
 	public Movement mouvements;
 	//public GameObject scriptCountainer;
-	private int waitTime = 0;
 
 	// Use this for initialization
 	void Start () {
