@@ -1,5 +1,6 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public enum WeaponType
 {
@@ -19,6 +20,7 @@ public class GetItem : MonoBehaviour {
 	public int posY;
 	private HeroScript hero;
 	private bool itemTaken;
+	GameObject mybutton;
 
 
 	public void GiveWeaponToPlayer(WeaponType weaponType)
@@ -28,6 +30,8 @@ public class GetItem : MonoBehaviour {
 			case(WeaponType.Rock):
 				{
 					//Permettre l'utilisation dans l'interface
+					//mybutton= GameObject.FindGameObjectsWithTag("Roche");
+					//mybutton.GetComponent<Button>().interactable = true;
 					Debug.Log ("Tu as pris une roche !");
 					break;
 				}
