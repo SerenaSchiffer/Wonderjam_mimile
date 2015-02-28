@@ -41,20 +41,24 @@ public class tireEnemy : MonoBehaviour {
 			int compare =dep -cible.mouvements.posX;
 			if (compare <= arme.distance)
 			{
-				
-				for (int cpt = 0; cpt < arme.distance; cpt++)
+				if(hero.mouvements.posY==cible.mouvements.posY)
 				{
-					if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
+					for (int cpt = 0; cpt < arme.distance; cpt++)
 					{
-						verif=true;
-					}
-					else
-					{
-						verif=false;
-						break;
+						if (tableauCourant[hero.mouvements.posX - cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
+						{
+							verif=true;
+						}
+						else
+						{
+							verif=false;
+							break;
+						}
 					}
 				}
-				
+				else{
+					verif=false;
+				}
 			}
 			else{
 				
@@ -102,6 +106,60 @@ public class tireEnemy : MonoBehaviour {
 		}   
 	}
 
-	
+	public void setEnemy(string nom)
+	{
+		switch(nom)
+		{
+			case "roche":{
+				arme.nom="roche";
+				arme.degat=1;
+				arme.distance=2;
+				arme.effet="Degat";
+				break;
+			}
+			case "bille":{
+				arme.nom="bille";
+				arme.degat=1;
+				arme.distance=2;
+				arme.effet="Degat";
+				break;
+			}
+			case "boite":{
+				arme.nom="boite";
+				arme.degat=1;
+				arme.distance=2;
+				arme.effet="Repousser";
+				break;
+			}
+			case"femure":{
+				arme.nom="femure";
+				arme.degat=1;
+				arme.distance=2;
+				arme.effet="Degat";
+				break;
+			}
+			case"chat":{
+				arme.nom="chat";
+				arme.degat=1;
+				arme.distance=2;
+				arme.effet="Immobilise";
+				break;
+			}
+			case"baguette":{
+				arme.nom="baguette";
+				arme.degat=1;
+				arme.distance=2;
+				arme.effet="Degat";
+				break;
+			}
+			default:{
+				arme.nom="roche";
+				arme.degat=1;
+				arme.distance=2;
+				arme.effet="Degat";
+				break;
+			}
+		}   
+	}
 	
 }
