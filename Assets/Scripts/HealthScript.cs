@@ -19,6 +19,4 @@ public class HealthScript : MonoBehaviour {
 			Destroy(gameObject);
 		}
 	}
-
-
 }

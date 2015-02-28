@@ -122,7 +122,7 @@ public class Movement : MonoBehaviour {
 			{
 				isMoving=false;
 				HeroScript hero = GameObject.FindObjectOfType<HeroScript>();
-				hero.turn.tour(!isHero);
+				hero.turn.tour(false);
 			}
 		}
 
