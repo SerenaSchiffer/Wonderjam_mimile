@@ -284,6 +284,8 @@ GameObject:
   - 114: {fileID: 11477020}
   - 114: {fileID: 11477022}
   - 95: {fileID: 9577018}
+  - 114: {fileID: 11421400}
+  - 114: {fileID: 11494836}
   m_Layer: 0
   m_Name: Hero 2
   m_TagString: Untagged
@@ -454,7 +456,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177052}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.10000002, y: -.270000011, z: -2}
+  m_LocalPosition: {x: -.556999981, y: .128999993, z: 0}
   m_LocalScale: {x: .25, y: .25, z: 1}
   m_Children:
   - {fileID: 477026}
@@ -531,7 +533,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 177052}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 3852b70f5a2fed949bb5beac9949fd41, type: 2}
   m_CullingMode: 0
@@ -539,6 +541,18 @@ Animator:
   m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11421400
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 11477020}
 --- !u!114 &11477018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -553,6 +567,7 @@ MonoBehaviour:
   canMove: 1
   mouvements: {fileID: 11477022}
   turn: {fileID: 0}
+  shooter: {fileID: 11494836}
 --- !u!114 &11477020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -582,6 +597,18 @@ MonoBehaviour:
   posY: 1
   Script: {fileID: 0}
   speed: 1
+--- !u!114 &11494836
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 177052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 11477020}
 --- !u!212 &21277018
 SpriteRenderer:
   m_ObjectHideFlags: 1

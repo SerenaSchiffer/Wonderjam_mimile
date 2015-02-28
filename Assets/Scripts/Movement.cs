@@ -117,7 +117,7 @@ public class Movement : MonoBehaviour {
 		if (isMoving) 
 		{
 			float step = speed * Time.deltaTime;
-			//GetComponent<Animator>().SetBool("isMoving",true);
+			GetComponent<Animator>().SetBool("isMoving",true);
 			transform.position = Vector3.MoveTowards(transform.position, target, step);
 			if(transform.position == target)
 			{
