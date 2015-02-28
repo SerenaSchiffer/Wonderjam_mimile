@@ -8,8 +8,8 @@ public class Movement : MonoBehaviour {
 	private const float cellHeightDecal = 0.65f;
 	public int posX = 0;
 	public int posY = 0;
-
 	public TableauCase Script;
+
 	///<summary>
 	/// Tente de vérifier si la case visée est navigable
 	/// </summary>
@@ -36,6 +36,8 @@ public class Movement : MonoBehaviour {
 		switch (direction) {
 			case('h'):
 				{
+					if(posY <2)
+					{
 					cible = tableauCourant[posXOrigine, posYOrigine + 1];
 					if(verifMove(cible))
 					{
@@ -44,10 +46,13 @@ public class Movement : MonoBehaviour {
 						cible.SetEtat(EtatCase.Hero);
 						transform.Translate(new Vector3(cellHeightDecal,cellHeight));
 					}
+					}
 					break;
 				}
 			case('b'):
 				{
+					if(posY >0)
+					{
 					cible = tableauCourant[posXOrigine, posYOrigine - 1];
 					if(verifMove(cible))
 					{	
@@ -56,10 +61,13 @@ public class Movement : MonoBehaviour {
 						cible.SetEtat(EtatCase.Hero);
 						transform.Translate(new Vector3(-cellHeightDecal,-cellHeight));
 					}
+					}
 					break;
 				}
 			case('d'):
 				{
+					if(posX<49)
+					{
 					cible = tableauCourant[posXOrigine+1, posYOrigine];
 					if(verifMove(cible))
 						{	
@@ -68,10 +76,13 @@ public class Movement : MonoBehaviour {
 							cible.SetEtat(EtatCase.Hero);
 							transform.Translate(new Vector3(cellWidth,0));
 						}
+					}
 					break;
 				}
 			case('g'):
 				{
+					if(posX>0)
+					{
 					cible = tableauCourant[posXOrigine-1, posYOrigine];
 					if(verifMove(cible))
 						{
@@ -80,6 +91,7 @@ public class Movement : MonoBehaviour {
 							cible.SetEtat(EtatCase.Hero);
 							transform.Translate(new Vector3(-cellWidth,0));
 						}
+					}
 					break;
 				}
 			}
