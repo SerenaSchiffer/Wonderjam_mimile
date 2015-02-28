@@ -19,6 +19,7 @@ public class GetItem : MonoBehaviour {
 	public int posY;
 	private HeroScript hero;
 	private bool itemTaken;
+	public TableauCase Script;
 
 
 	public void GiveWeaponToPlayer(WeaponType weaponType)
@@ -29,6 +30,8 @@ public class GetItem : MonoBehaviour {
 				{
 					//Permettre l'utilisation dans l'interface
 					Debug.Log ("Tu as pris une roche !");
+					Destroy (gameObject);
+					Script.tableauCases[posX,posY].SetEtat(EtatCase.Empty);
 					break;
 				}
 			case(WeaponType.Bone):

@@ -53,6 +53,21 @@ public class TableauCase : MonoBehaviour {
 			tableauCases[4,2].SetEtat(EtatCase.Trap);
 			break;
 			}
+
+			case 1 :
+			{
+			Debug.Log ("Entrée sur le niveau 1");
+			tableauCases[2,0].SetEtat(EtatCase.Obstacle);
+			tableauCases[2,1].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[2,2].SetEtat(EtatCase.Obstacle);
+			tableauCases[3,2].SetEtat(EtatCase.Obstacle);
+			tableauCases[5,0].SetEtat(EtatCase.Obstacle);
+			tableauCases[5,1].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[8,2].SetEtat(EtatCase.Obstacle);
+			tableauCases[11,1].SetEtat(EtatCase.Obstacle);
+			tableauCases[12,1].SetEtat(EtatCase.Obstacle);
+			break;
+			}
 		}
 	}
 }
