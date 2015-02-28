@@ -10,6 +10,7 @@ public class EnemyScript : MonoBehaviour {
 
     private GameObject enemy;
 	private bool spawned;
+    private bool resultat;
 
 	// Use this for initialization
 	void Start () {
@@ -35,14 +36,26 @@ public class EnemyScript : MonoBehaviour {
                 {
                     if (!isThereObstacle('g') && mouvements.posX < 49)
                     {
-                        mouvements.Move('g', mouvements.posX, mouvements.posY);
+                        resultat = mouvements.Move('g', mouvements.posX, mouvements.posY);
+
+                        if (resultat)
+                        {
+                            Debug.Log("bouge vers gauche");
+                            hero.canMove = true;
+                        }
                     }
                 }
                 else
                 {
                     if (!isThereObstacle('d') && mouvements.posX > 0)
                     {
-                        mouvements.Move('d', mouvements.posX, mouvements.posY);
+                        resultat = mouvements.Move('d', mouvements.posX, mouvements.posY);
+
+                        if (resultat)
+                        {
+                            Debug.Log("bouge vers droite");
+                            hero.canMove = true;
+                        }
                     }
                 }
             }
@@ -58,14 +71,29 @@ public class EnemyScript : MonoBehaviour {
                 {
                     if (enemiEnHaut)
                     {
-                        
                         if (!isThereObstacle('b') && mouvements.posY < 2)
-                            mouvements.Move('b', mouvements.posX, mouvements.posY);
+                        {   
+                            resultat = mouvements.Move('b', mouvements.posX, mouvements.posY);
+
+                            if (resultat)
+                            {
+                                Debug.Log("bouge vers bas");
+                                hero.canMove = true;
+                            }
+                        }
                     }
                     else
                     {
                         if (!isThereObstacle('h') && mouvements.posY > 0)
-                            mouvements.Move('h', mouvements.posX, mouvements.posY);
+                        {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                            resultat = mouvements.Move('h', mouvements.posX, mouvements.posY);
+
+                            if (resultat)
+                            {
+                                Debug.Log("bouge vers haut");
+                                hero.canMove = true;
+                            }
+                        }
                     }
                 }
             }

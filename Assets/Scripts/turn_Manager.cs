@@ -15,11 +15,11 @@ public class turn_Manager : MonoBehaviour {
 	}
 		
 	public void tour(bool isHero)
-	{
+    {
 		if (isHero) 
 		{
 			HeroScript hero = GameObject.FindObjectOfType<HeroScript>();
-			hero.canMove=true;
+			//hero.canMove=true;
 		} 
 
 		else 

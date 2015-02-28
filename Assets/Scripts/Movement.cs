@@ -6,7 +6,7 @@ public class Movement : MonoBehaviour {
 	private const float cellWidth = 1.488f;
 	private const float cellHeight = 0.695f;
 	private const float cellHeightDecal = 0.65f;
-	public bool isHero;
+	public const bool isHero = true;
 	public int posX = 0;
 	public int posY = 0;
 	public TableauCase Script;
@@ -117,15 +117,14 @@ public class Movement : MonoBehaviour {
 		if (isMoving) 
 		{
 			float step = speed * Time.deltaTime;
-			GetComponent<Animator>().SetBool("isMoving",true);
+			//GetComponent<Animator>().SetBool("isMoving",true);
 			transform.position = Vector3.MoveTowards(transform.position, target, step);
 			if(transform.position == target)
 			{
 				isMoving=false;
 				HeroScript hero = GameObject.FindObjectOfType<HeroScript>();
 				GetComponent<Animator>().SetBool("isMoving",false);
-				hero.turn.tour(!isHero);
-                isHero = !isHero;
+                hero.turn.tour(!isHero);
 			}
 		}
 
