@@ -2,37 +2,44 @@
 using System.Collections;
 
 public class tire : MonoBehaviour {
-    private int degat;
+
+    
     private bool verif=true;
-    public TableauCase script;
-    Case[,] tableauCourant = GameObject.Find("/nomPrefabTableau");
+    
+	public HealthScript health;
           
     public struct armeJoueur{
-        string nom;
-        int degat;
-        int distance;
-        string effet;
+        public string nom;
+        public int degat;
+        public int distance;
+        public string effet;
     }
     armeJoueur arme=new armeJoueur();
+    Case[,] tableauCourant;
 	// Use this for initialization
 	void Start () {
-	 
+        
+
 	}
-	1
+	
 	// Update is called once per frame
 	void Update () {
 	
 	}
-    public bool tirer(string Depart/*vie de la cible*/,string Fin){
+    public bool tirer(HeroScript hero/*vie de la cible*/, HeroScript cible)
+    {
+		tableauCourant = hero.mouvements.Script.tableauCases;
         switch(arme.effet)
         {
             case "Degat":{
-                if (GameObject.Find("/" + Depart + "/Movement").posX - GameObject.Find("/" + Fin + "/Movement").posX <= arme.distance)
+			int dep =hero.mouvements.posX;
+			int compare =dep -cible.mouvements.posX;
+                if (compare <= arme.distance)
                {
 
-                 for(int cpt=0;cpt<distanceTire;cpt++)
+                   for (int cpt = 0; cpt < arme.distance; cpt++)
                  {
-                     if (tableauCourant[GameObject.Find("/" + Depart + "/Movement").posX + cpt, GameObject.Find("/" + Depart + "/Movement").posY] == EtatCase.Empty)
+					if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
                      {
                         verif=true;
                      }
@@ -53,9 +60,9 @@ public class tire : MonoBehaviour {
                 break;
             }
             case "Repousser":{
-                 for(int cpt=0;cpt<distanceTire;cpt++)
+                 for(int cpt=0;cpt<arme.distance;cpt++)
                  {
-                     if (tableauCourant[GameObject.Find("/" + Depart + "/Movement").posX + cpt, GameObject.Find("/" + Depart + "/Movement").posY] == EtatCase.Empty)
+				if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
                      {
                         verif=true;
                      }
@@ -69,7 +76,9 @@ public class tire : MonoBehaviour {
                      {
                          for(int cpt=1;cpt<=2/*nb de case ou on le repousse*/;cpt++)
                          {
-                             if (tableauCourant[GameObject.Find("/" + Depart + "/Movement").posX + cpt, GameObject.Find("/" + Depart + "/Movement").posY] == EtatCase.Empty)
+
+
+							if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() ==  EtatCase.Empty)
                              {
                                 verif=true;
                              }
@@ -94,7 +103,7 @@ public class tire : MonoBehaviour {
         }
         if(verif==true)
         {
-             attack(Fin);
+            attack(cible);
         }
         else
         {
@@ -103,18 +112,20 @@ public class tire : MonoBehaviour {
         return verif;
 
     }
-    private void attack(string nom){
+    private void attack(HeroScript cible)
+    {
         
         switch(arme.effet)
         {
             case "Degat":{
-                GameObject.Find("/" + Depart + "/HealthScript").Hp -= degat;
+				health=cible.GetComponent<HealthScript>();
+				health.hp -= arme.degat;
 
                
                 break;
             }
             case "Repousser":{
-                GameObject.Find("/" + Depart + "/Movement").PosX + 2;                
+                cible.mouvements.posX += 2;                
                 break;
             }
             case "Immobilise":{
@@ -183,5 +194,6 @@ public class tire : MonoBehaviour {
             }
         }   
     }
+
     
 }
