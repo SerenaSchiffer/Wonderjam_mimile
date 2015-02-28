@@ -1,0 +1,124 @@
+fileFormatVersion: 2
+guid: ea3cd0b6f1214ca49b8675cf03d20f3b
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ecu_brasgauche
+    21300002: ecu_queue
+    21300004: ecu_corps
+    21300006: ecu_gland
+    21300008: ecu_pattedroite
+    21300010: ecu_pattegauche
+    21300012: ecu_brasdroit
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ecu_brasgauche
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 653
+        width: 180
+        height: 192
+      alignment: 9
+      pivot: {x: .708614588, y: .874388695}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ecu_queue
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 513
+        width: 252
+        height: 376
+      alignment: 9
+      pivot: {x: .180692151, y: .166153446}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ecu_corps
+      rect:
+        serializedVersion: 2
+        x: 372
+        y: 308
+        width: 459
+        height: 473
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ecu_gland
+      rect:
+        serializedVersion: 2
+        x: 962
+        y: 140
+        width: 207
+        height: 214
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ecu_pattedroite
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 51
+        width: 229
+        height: 197
+      alignment: 9
+      pivot: {x: .579645693, y: .826763928}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ecu_pattegauche
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 42
+        width: 237
+        height: 256
+      alignment: 9
+      pivot: {x: .522634447, y: .84784615}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ecu_brasdroit
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 406
+        width: 133
+        height: 114
+      alignment: 9
+      pivot: {x: .806535542, y: .772924602}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 

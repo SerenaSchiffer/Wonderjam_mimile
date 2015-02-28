@@ -1397,6 +1397,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMove: 1
   mouvements: {fileID: 1315781712}
+  turn: {fileID: 0}
 --- !u!1 &1471565284
 GameObject:
   m_ObjectHideFlags: 0
