@@ -37,12 +37,6 @@ public class EnemyScript : MonoBehaviour {
                     if (!isThereObstacle('g') && mouvements.posX < 49)
                     {
                         resultat = mouvements.Move('g', mouvements.posX, mouvements.posY);
-
-                        if (resultat)
-                        {
-                            Debug.Log("bouge vers gauche");
-                            hero.canMove = true;
-                        }
                     }
                 }
                 else
@@ -50,12 +44,6 @@ public class EnemyScript : MonoBehaviour {
                     if (!isThereObstacle('d') && mouvements.posX > 0)
                     {
                         resultat = mouvements.Move('d', mouvements.posX, mouvements.posY);
-
-                        if (resultat)
-                        {
-                            Debug.Log("bouge vers droite");
-                            hero.canMove = true;
-                        }
                     }
                 }
             }
@@ -63,9 +51,9 @@ public class EnemyScript : MonoBehaviour {
             {
                 if (hero.mouvements.posY == mouvements.posY || hero.mouvements.posX == mouvements.posX)
                 {
-                    tire actionEnnemi = this.GetComponent<tire>();
-
-                    Debug.Log("L'ennemi attaque");
+                    tireEnemy actionEnnemi = this.GetComponent<tireEnemy>();
+                    Debug.Log("Ennemi attaque");
+                    actionEnnemi.tirer(this, hero);
                 }
                 else
                 {
@@ -74,12 +62,6 @@ public class EnemyScript : MonoBehaviour {
                         if (!isThereObstacle('b') && mouvements.posY < 2)
                         {   
                             resultat = mouvements.Move('b', mouvements.posX, mouvements.posY);
-
-                            if (resultat)
-                            {
-                                Debug.Log("bouge vers bas");
-                                hero.canMove = true;
-                            }
                         }
                     }
                     else
@@ -87,12 +69,6 @@ public class EnemyScript : MonoBehaviour {
                         if (!isThereObstacle('h') && mouvements.posY > 0)
                         {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
                             resultat = mouvements.Move('h', mouvements.posX, mouvements.posY);
-
-                            if (resultat)
-                            {
-                                Debug.Log("bouge vers haut");
-                                hero.canMove = true;
-                            }
                         }
                     }
                 }

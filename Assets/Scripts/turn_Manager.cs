@@ -19,7 +19,7 @@ public class turn_Manager : MonoBehaviour {
 		if (isHero) 
 		{
 			HeroScript hero = GameObject.FindObjectOfType<HeroScript>();
-			//hero.canMove=true;
+			hero.canMove=true;
 		} 
 
 		else 

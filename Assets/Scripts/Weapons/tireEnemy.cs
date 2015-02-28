@@ -93,23 +93,8 @@ public class tireEnemy : MonoBehaviour {
 	}
 	private void  attack(HeroScript cible)
 	{
-		
-		switch(arme.effet)
-		{
-			case "Degat":{
-				health=cible.GetComponent<HealthScript>();
-				health.hp -= arme.degat;
-				
-				
-				break;
-			}
-			
-				
-			default:{
-				
-				break;
-			}
-		}   
+		health=cible.GetComponent<HealthScript>();
+		health.hp -= arme.degat;  
 	}
 
 	public void setEnemy(string nom)
