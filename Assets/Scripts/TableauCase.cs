@@ -42,6 +42,11 @@ public class Case
         etat = EtatCase.Empty;
     }
 
+	public Case(EtatCase etatCase)
+	{
+		etat = etatCase;
+	}
+
     public void SetEtat(EtatCase etat)
     {
         this.etat = etat;

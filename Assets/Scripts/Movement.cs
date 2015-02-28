@@ -3,33 +3,86 @@ using System.Collections;
 
 public class Movement : MonoBehaviour {
 
-	private  const double CellWidth = 1.488;
-	private  const double CellHeight = 0.695;
+	private const float cellWidth = 1.488f;
+	private const float cellHeight = 0.695f;
+	public int posX = 0;
+	public int posY = 0;
 
+	public TableauCase Script;
 	///<summary>
 	/// Tente de vérifier si la case visée est navigable
 	/// </summary>
-	static void verifMove()
+	public bool verifMove(Case cible)
 	{
-
-
+		if(cible.GetCase() == EtatCase.Empty) 
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
 	}
-/*
+
 	/// <summary>
 	/// Termine le mouvement entamé
 	/// </summary>
-	public static void commitMove(char direction) // Directions possible : h, b, g, d
+	public void Move(char direction, int posXOrigine, int posYOrigine) // Directions possible : h, b, g, d
 	{
-		switch (direction)
-		{
-			case('h')
-			{
-				break;
+		Case[,] tableauCourant = Script.tableauCases;
+		Debug.Log (tableauCourant[0,0].GetCase());
+		Case origine = tableauCourant[posXOrigine, posYOrigine];
+		Case cible;
+		switch (direction) {
+			case('h'):
+				{
+					cible = tableauCourant[posXOrigine, posYOrigine + 1];
+					if(verifMove(cible))
+					{
+						posY++;
+						origine.SetEtat(EtatCase.Empty);
+						cible.SetEtat(EtatCase.Hero);
+						transform.Translate(new Vector3(0,cellHeight));
+					}
+					break;
+				}
+			case('b'):
+				{
+					cible = tableauCourant[posXOrigine, posYOrigine - 1];
+					if(verifMove(cible))
+					{	
+						posY--;
+						origine.SetEtat(EtatCase.Empty);
+						cible.SetEtat(EtatCase.Hero);
+						//Translate le sprite du hero
+						
+					}
+					break;
+				}
+			case('d'):
+				{
+					cible = tableauCourant[posXOrigine+1, posYOrigine];
+					if(verifMove(cible))
+						{	
+							posX++;
+							origine.SetEtat(EtatCase.Empty);
+							cible.SetEtat(EtatCase.Hero);
+							transform.Translate(new Vector3(cellWidth,0));
+						}
+					break;
+				}
+			case('g'):
+				{
+					cible = tableauCourant[posXOrigine-1, posYOrigine];
+					if(verifMove(cible))
+						{
+							posX--;
+							origine.SetEtat(EtatCase.Empty);
+							cible.SetEtat(EtatCase.Hero);
+							//Translate le sprite du hero
+						}
+					break;
+				}
 			}
-
-		}
-
 	}
-
-*/
 }
