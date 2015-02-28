@@ -5,7 +5,7 @@ public class HeroScript : MonoBehaviour {
 	public bool canMove;
 	public Movement mouvements;
 	//public GameObject scriptCountainer;
-	private int waitTime = 0;
+	public turn_Manager turn = new turn_Manager();
 
 	// Use this for initialization
 	void Start () {
@@ -26,39 +26,32 @@ public class HeroScript : MonoBehaviour {
 			{
 				mouvements.Move('d',posX,posY);
 				canMove=false;
-				changeTurn();
+				turn.tour_Hero();
+
 			}
 			if(Input.GetAxis ("Horizontal") == -1)
 			{
 				mouvements.Move('g',posX,posY);
 				canMove=false;
-				changeTurn();
+				turn.tour_Hero();
 			}
 			if(Input.GetAxis ("Vertical") == 1)
 			{
 				mouvements.Move('h',posX,posY);
 				canMove=false;
-				changeTurn();
+				turn.tour_Hero();
 			}
 			if(Input.GetAxis ("Vertical") == -1)
 			{
 				mouvements.Move('b',posX,posY);
 				canMove=false;
-				changeTurn();
+				turn.tour_Hero();
 			}
 		}
 
 	}
 
 
-	public void changeTurn()
-	{
-		//Joue le tour des ennemis
-
-
-		//Rend la possibilité de jouer
-		canMove = true;
-	}
 
 
 
