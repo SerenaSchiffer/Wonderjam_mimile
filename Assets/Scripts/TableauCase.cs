@@ -54,6 +54,12 @@ public class Case
 		etat = etatCase;
 	}
 
+    public Case(EtatCase etat, object gameObject)
+    {
+        this.etat = etat;
+        contenuCase = gameObject;
+    }
+
     public void SetEtat(EtatCase etat)
     {
         this.etat = etat;
