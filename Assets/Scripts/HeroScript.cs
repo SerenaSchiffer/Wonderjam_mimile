@@ -30,10 +30,7 @@ public class HeroScript : MonoBehaviour {
 				if(resultat)
 				{
 					canMove=false;
-					turn.tour (false);
 				}
-				mouvements.Move('d',posX,posY);
-				canMove=false;
 			}
 			if(Input.GetAxis ("Horizontal") == -1)
 			{
@@ -41,7 +38,6 @@ public class HeroScript : MonoBehaviour {
 				if(resultat)
 				{
 				canMove=false;
-				turn.tour (false);
 				}
 			}
 			if(Input.GetAxis ("Vertical") == 1)
@@ -50,7 +46,6 @@ public class HeroScript : MonoBehaviour {
 				if(resultat)
 				{
 				canMove=false;
-				turn.tour (false);
 				}
 			}
 			if(Input.GetAxis ("Vertical") == -1)
@@ -59,7 +54,6 @@ public class HeroScript : MonoBehaviour {
 				if(resultat)
 				{
 				canMove=false;
-				turn.tour(false);
 				}
 			}
 		}
