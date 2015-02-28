@@ -32,8 +32,13 @@ public class tire : MonoBehaviour {
         switch(arme.effet)
         {
             case "Degat":{
-			int dep =hero.mouvements.posX;
-			int compare =dep -cible.mouvements.posX+1;
+			if(hero.mouvements.posX>cible.mouvements.posX) {
+				int dep =hero.mouvements.posX;
+				int compare =dep -cible.mouvements.posX;
+			}else{
+				int dep =cible.mouvements.posX;
+				int compare =dep -hero.mouvements.posX;
+			}
                 if (compare <= arme.distance)
                {
 				if(hero.mouvements.posY==cible.mouvements.posY){
