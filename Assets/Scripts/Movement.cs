@@ -127,7 +127,5 @@ public class Movement : MonoBehaviour {
                 hero.turn.tour(!isHero);
 			}
 		}
-
-
 	}
 }

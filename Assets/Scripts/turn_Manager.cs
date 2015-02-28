@@ -33,8 +33,9 @@ public class turn_Manager : MonoBehaviour {
 		}
 	}
 
-		
-		
-		
-
+	void LateUpdate()
+	{
+		//Camera camera = GameObject.FindObjectOfType<Camera>();
+		//camera.transform.position.y = 1.66f;
+	}
 }
