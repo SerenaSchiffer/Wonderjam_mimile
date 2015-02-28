@@ -28,16 +28,17 @@ public class tire : MonoBehaviour {
 	}
     public bool tirer(HeroScript hero, EnemyScript cible)
     {
+		int compare;
 		tableauCourant = hero.mouvements.Script.tableauCases;
         switch(arme.effet)
         {
             case "Degat":{
 			if(hero.mouvements.posX>cible.mouvements.posX) {
 				int dep =hero.mouvements.posX;
-				int compare =dep -cible.mouvements.posX;
+				compare =dep -cible.mouvements.posX;
 			}else{
 				int dep =cible.mouvements.posX;
-				int compare =dep -hero.mouvements.posX;
+				compare =dep -hero.mouvements.posX;
 			}
                 if (compare <= arme.distance)
                {
