@@ -26,7 +26,7 @@ public class tire : MonoBehaviour {
 	void Update () {
 	
 	}
-    public bool tirer(HeroScript hero/*vie de la cible*/, HeroScript cible)
+    public bool tirer(HeroScript hero/*vie de la cible*/, EnemyScript cible)
     {
 		tableauCourant = hero.mouvements.Script.tableauCases;
         switch(arme.effet)
@@ -112,7 +112,7 @@ public class tire : MonoBehaviour {
         return verif;
 
     }
-    private void attack(HeroScript cible)
+	private void attack(EnemyScript cible)
     {
         
         switch(arme.effet)
