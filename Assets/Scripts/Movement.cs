@@ -6,9 +6,15 @@ public class Movement : MonoBehaviour {
 	private const float cellWidth = 1.488f;
 	private const float cellHeight = 0.695f;
 	private const float cellHeightDecal = 0.65f;
+	public bool isHero;
 	public int posX = 0;
 	public int posY = 0;
 	public TableauCase Script;
+
+	public float speed = 2f;
+	private Vector3 target;
+	private bool isMoving;
+
 
 	///<summary>
 	/// Tente de vérifier si la case visée est navigable
@@ -39,15 +45,16 @@ public class Movement : MonoBehaviour {
 				{
 					if(posY <2)
 					{
-					cible = tableauCourant[posXOrigine, posYOrigine + 1];
-					if(verifMove(cible))
-					{
-						posY++;
-						origine.SetEtat(EtatCase.Empty);
-						cible.SetEtat(EtatCase.Hero);
-						transform.Translate(new Vector3(cellHeightDecal,cellHeight));
-						resultat=true;
-					}
+						cible = tableauCourant[posXOrigine, posYOrigine + 1];
+						if(verifMove(cible))
+						{
+							posY++;
+							origine.SetEtat(EtatCase.Empty);
+							cible.SetEtat(EtatCase.Hero);
+							target = new Vector3(transform.position.x+cellHeightDecal,transform.position.y+cellHeight,transform.position.z);
+							isMoving=true;
+							resultat=true;
+						}
 					}
 					break;
 				}
@@ -55,15 +62,16 @@ public class Movement : MonoBehaviour {
 				{
 					if(posY >0)
 					{
-					cible = tableauCourant[posXOrigine, posYOrigine - 1];
-					if(verifMove(cible))
-					{	
-						posY--;
-						origine.SetEtat(EtatCase.Empty);
-						cible.SetEtat(EtatCase.Hero);
-						transform.Translate(new Vector3(-cellHeightDecal,-cellHeight));
-						resultat=true;
-					}
+						cible = tableauCourant[posXOrigine, posYOrigine - 1];
+						if(verifMove(cible))
+						{	
+							posY--;
+							origine.SetEtat(EtatCase.Empty);
+							cible.SetEtat(EtatCase.Hero);
+							target = new Vector3(transform.position.x-cellHeightDecal,transform.position.y-cellHeight,transform.position.z);
+							isMoving=true;
+							resultat=true;
+						}
 					}
 					break;
 				}
@@ -71,15 +79,16 @@ public class Movement : MonoBehaviour {
 				{
 					if(posX<49)
 					{
-					cible = tableauCourant[posXOrigine+1, posYOrigine];
-					if(verifMove(cible))
-						{	
-							posX++;
-							origine.SetEtat(EtatCase.Empty);
-							cible.SetEtat(EtatCase.Hero);
-							transform.Translate(new Vector3(cellWidth,0));
-							resultat=true;
-						}
+						cible = tableauCourant[posXOrigine+1, posYOrigine];
+						if(verifMove(cible))
+							{	
+								posX++;
+								origine.SetEtat(EtatCase.Empty);
+								cible.SetEtat(EtatCase.Hero);
+								target = new Vector3(transform.position.x+cellWidth,transform.position.y,transform.position.z);
+								isMoving=true;
+								resultat=true;
+							}
 					}
 					break;
 				}
@@ -87,19 +96,36 @@ public class Movement : MonoBehaviour {
 				{
 					if(posX>0)
 					{
-					cible = tableauCourant[posXOrigine-1, posYOrigine];
-					if(verifMove(cible))
-						{
-							posX--;
-							origine.SetEtat(EtatCase.Empty);
-							cible.SetEtat(EtatCase.Hero);
-							transform.Translate(new Vector3(-cellWidth,0));
-							resultat=true;
-						}
+						cible = tableauCourant[posXOrigine-1, posYOrigine];
+						if(verifMove(cible))
+							{
+								posX--;
+								origine.SetEtat(EtatCase.Empty);
+								cible.SetEtat(EtatCase.Hero);
+								target = new Vector3(transform.position.x-cellWidth,transform.position.y,transform.position.z);
+								isMoving=true;
+								resultat=true;
+							}
 					}
 					break;
 				}
 			}
 		return resultat;
+	}
+
+	void FixedUpdate(){
+		if (isMoving) 
+		{
+			float step = speed * Time.deltaTime;
+			transform.position = Vector3.MoveTowards(transform.position, target, step);
+			if(transform.position == target)
+			{
+				isMoving=false;
+				HeroScript hero = GameObject.FindObjectOfType<HeroScript>();
+				hero.turn.tour(!isHero);
+			}
+		}
+
+
 	}
 }

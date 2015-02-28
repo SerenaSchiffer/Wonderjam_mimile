@@ -165,8 +165,9 @@ Transform:
   - {fileID: 1071462092}
   - {fileID: 600603399}
   - {fileID: 1214938801}
+  - {fileID: 401448034}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!114 &18635454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -182,6 +183,7 @@ MonoBehaviour:
   posX: 0
   posY: 1
   Script: {fileID: 1059223875}
+  speed: 1
 --- !u!114 &18635455
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -547,11 +549,11 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 401448029}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 4.80000019, y: 1.20000005, z: -8}
+  m_LocalScale: {x: 4, y: 4, z: 1}
   m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_Father: {fileID: 18635453}
+  m_RootOrder: 17
 --- !u!1001 &456304402
 Prefab:
   m_ObjectHideFlags: 0
@@ -1389,7 +1391,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 462568, guid: acba55adad56990498f4c1012b18615c, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 11462602, guid: acba55adad56990498f4c1012b18615c, type: 2}
       propertyPath: Script
@@ -1838,6 +1840,7 @@ MonoBehaviour:
   posX: 2
   posY: 1
   Script: {fileID: 1059223875}
+  speed: 1
 --- !u!212 &1782623932
 SpriteRenderer:
   m_ObjectHideFlags: 0
