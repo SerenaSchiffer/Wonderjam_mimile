@@ -19,13 +19,6 @@ public class TableauCase : MonoBehaviour {
 	void Start () {
         tableauCases = new Case[50, 3];
 
-        for (int i = 0 ; i < 50; i++)
-        {
-            for (int j = 0; j < 3; j++)
-            {
-                tableauCases[i, j].SetEtat(EtatCase.Empty);
-            }
-        }
 	}
 	
 	// Update is called once per frame
@@ -43,6 +36,11 @@ public class Case
 {
     private EtatCase etat;
     public object contenuCase;
+
+    public Case()
+    {
+        etat = EtatCase.Empty;
+    }
 
     public void SetEtat(EtatCase etat)
     {
