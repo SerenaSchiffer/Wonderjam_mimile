@@ -85,7 +85,7 @@ public class tireEnemy : MonoBehaviour {
 		return verif;
 		
 	}
-	private void attack(HeroScript cible)
+	private void  attack(HeroScript cible)
 	{
 		
 		switch(arme.effet)
@@ -108,54 +108,26 @@ public class tireEnemy : MonoBehaviour {
 
 	public void setEnemy(string nom)
 	{
+		/*
+		====================IMPORTANT=========================
+		c'est ici que seront ajouter les différent type 
+		d'enemi avec leur degat
+		======================================================		
+		 */
 		switch(nom)
 		{
-			case "roche":{
-				arme.nom="roche";
+		case "squirrel":{
+				arme.nom="squirrel";
 				arme.degat=1;
-				arme.distance=2;
+				arme.distance=1;
 				arme.effet="Degat";
 				break;
 			}
-			case "bille":{
-				arme.nom="bille";
-				arme.degat=1;
-				arme.distance=2;
-				arme.effet="Degat";
-				break;
-			}
-			case "boite":{
-				arme.nom="boite";
-				arme.degat=1;
-				arme.distance=2;
-				arme.effet="Repousser";
-				break;
-			}
-			case"femure":{
-				arme.nom="femure";
-				arme.degat=1;
-				arme.distance=2;
-				arme.effet="Degat";
-				break;
-			}
-			case"chat":{
-				arme.nom="chat";
-				arme.degat=1;
-				arme.distance=2;
-				arme.effet="Immobilise";
-				break;
-			}
-			case"baguette":{
-				arme.nom="baguette";
-				arme.degat=1;
-				arme.distance=2;
-				arme.effet="Degat";
-				break;
-			}
+
 			default:{
-				arme.nom="roche";
+				arme.nom="squirrel";
 				arme.degat=1;
-				arme.distance=2;
+				arme.distance=1;
 				arme.effet="Degat";
 				break;
 			}
