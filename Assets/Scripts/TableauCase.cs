@@ -12,7 +12,7 @@ public enum EtatCase
 };
 
 public class TableauCase : MonoBehaviour {
-
+	public int mapNumber = 0;
     public Case[,] tableauCases;
 
 	// Use this for initialization
@@ -26,6 +26,8 @@ public class TableauCase : MonoBehaviour {
                 tableauCases[i, j] = new Case(EtatCase.Empty);
             }
         }
+
+		GenerateMap (mapNumber);
 	}
 	
 	// Update is called once per frame
@@ -37,7 +39,27 @@ public class TableauCase : MonoBehaviour {
     {
         tableauCases[x, y].SetEtat(nouvEtat);
     }
+
+	public void GenerateMap(int mapNumber)
+	{
+		switch (mapNumber) 
+		{
+			case 0 :
+			{
+			Debug.Log ("Entrée sur la map de test");
+			tableauCases[2,2].SetEtat(EtatCase.Obstacle);
+			tableauCases[3,0].SetEtat(EtatCase.Trap);
+			tableauCases[4,2].SetEtat(EtatCase.Trap);
+			break;
+			}
+		}
+	}
+
 }
+
+
+
+
 
 public class Case
 {
