@@ -18,7 +18,7 @@ public class tire : MonoBehaviour {
 	void Start () {
 	 
 	}
-	
+	1
 	// Update is called once per frame
 	void Update () {
 	
