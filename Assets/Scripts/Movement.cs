@@ -117,11 +117,13 @@ public class Movement : MonoBehaviour {
 		if (isMoving) 
 		{
 			float step = speed * Time.deltaTime;
+			GetComponent<Animator>().SetBool("isMoving",true);
 			transform.position = Vector3.MoveTowards(transform.position, target, step);
 			if(transform.position == target)
 			{
 				isMoving=false;
 				HeroScript hero = GameObject.FindObjectOfType<HeroScript>();
+				GetComponent<Animator>().SetBool("isMoving",false);
 				hero.turn.tour(!isHero);
                 isHero = !isHero;
 			}
