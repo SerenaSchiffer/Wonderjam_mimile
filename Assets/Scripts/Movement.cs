@@ -6,8 +6,6 @@ public class Movement : MonoBehaviour {
 	private  const double CellWidth = 1.488;
 	private  const double CellHeight = 0.695;
 
-
-	/*
 	///<summary>
 	/// Tente de vérifier si la case visée est navigable
 	/// </summary>
