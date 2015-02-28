@@ -15,7 +15,7 @@ public class turn_Manager : MonoBehaviour {
 	}
 		
 	public void tour(bool isHero)
-	{
+    {
 		if (isHero) 
 		{
 			HeroScript hero = GameObject.FindObjectOfType<HeroScript>();
@@ -33,8 +33,8 @@ public class turn_Manager : MonoBehaviour {
 		}
 	}
 
-		
-		
-		
+	void LateUpdate()
+	{
 
+	}
 }

@@ -9,7 +9,7 @@ public class HeroScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
+        canMove = true;
 	}
 
 	void Update(){
@@ -17,8 +17,8 @@ public class HeroScript : MonoBehaviour {
 
 
 	// Update is called once per frame
-	void FixedUpdate () {
-        
+	void FixedUpdate ()
+    {
 		if (canMove) 
 		{            
 			int posX = mouvements.posX;
@@ -29,7 +29,7 @@ public class HeroScript : MonoBehaviour {
 				resultat = mouvements.Move('d',posX,posY);
 				if(resultat)
 				{
-					canMove=false;
+					canMove = false;
 				}
 			}
 			if(Input.GetAxis ("Horizontal") == -1)
@@ -37,7 +37,7 @@ public class HeroScript : MonoBehaviour {
 				resultat = mouvements.Move('g',posX,posY);
 				if(resultat)
 				{
-				canMove=false;
+                    canMove = false;
 				}
 			}
 			if(Input.GetAxis ("Vertical") == 1)
@@ -45,7 +45,7 @@ public class HeroScript : MonoBehaviour {
 				resultat = mouvements.Move('h',posX,posY);
 				if(resultat)
 				{
-				canMove=false;
+                    canMove = false;
 				}
 			}
 			if(Input.GetAxis ("Vertical") == -1)
@@ -53,14 +53,9 @@ public class HeroScript : MonoBehaviour {
 				resultat = mouvements.Move('b',posX,posY);
 				if(resultat)
 				{
-				canMove=false;
+                    canMove = false;
 				}
 			}
 		}
 	}
-
-
-
-
-
 }

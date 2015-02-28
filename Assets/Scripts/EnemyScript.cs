@@ -10,6 +10,7 @@ public class EnemyScript : MonoBehaviour {
 
     private GameObject enemy;
 	private bool spawned;
+    private bool resultat;
 
 	// Use this for initialization
 	void Start () {
@@ -35,14 +36,14 @@ public class EnemyScript : MonoBehaviour {
                 {
                     if (!isThereObstacle('g') && mouvements.posX < 49)
                     {
-                        mouvements.Move('g', mouvements.posX, mouvements.posY);
+                        resultat = mouvements.Move('g', mouvements.posX, mouvements.posY);
                     }
                 }
                 else
                 {
                     if (!isThereObstacle('d') && mouvements.posX > 0)
                     {
-                        mouvements.Move('d', mouvements.posX, mouvements.posY);
+                        resultat = mouvements.Move('d', mouvements.posX, mouvements.posY);
                     }
                 }
             }
@@ -50,22 +51,25 @@ public class EnemyScript : MonoBehaviour {
             {
                 if (hero.mouvements.posY == mouvements.posY || hero.mouvements.posX == mouvements.posX)
                 {
-                    tire actionEnnemi = this.GetComponent<tire>();
-
-                    Debug.Log("L'ennemi attaque");
+                    tireEnemy actionEnnemi = this.GetComponent<tireEnemy>();
+                    Debug.Log("Ennemi attaque");
+                    actionEnnemi.tirer(this, hero);
                 }
                 else
                 {
                     if (enemiEnHaut)
                     {
-                        
                         if (!isThereObstacle('b') && mouvements.posY < 2)
-                            mouvements.Move('b', mouvements.posX, mouvements.posY);
+                        {   
+                            resultat = mouvements.Move('b', mouvements.posX, mouvements.posY);
+                        }
                     }
                     else
                     {
                         if (!isThereObstacle('h') && mouvements.posY > 0)
-                            mouvements.Move('h', mouvements.posX, mouvements.posY);
+                        {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+                            resultat = mouvements.Move('h', mouvements.posX, mouvements.posY);
+                        }
                     }
                 }
             }
