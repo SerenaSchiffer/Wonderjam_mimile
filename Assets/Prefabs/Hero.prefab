@@ -552,6 +552,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canMove: 1
   mouvements: {fileID: 11462602}
+  turn: {fileID: 0}
 --- !u!114 &11462600
 MonoBehaviour:
   m_ObjectHideFlags: 1

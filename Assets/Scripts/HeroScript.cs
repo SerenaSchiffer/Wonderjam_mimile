@@ -32,8 +32,6 @@ public class HeroScript : MonoBehaviour {
 					canMove=false;
 					turn.tour (false);
 				}
-				mouvements.Move('d',posX,posY);
-				canMove=false;
 			}
 			if(Input.GetAxis ("Horizontal") == -1)
 			{
