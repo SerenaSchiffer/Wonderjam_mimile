@@ -50,6 +50,36 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110255492
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: hero_walk1
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: b8632e6ae759b3a4fb30197f4f8001ee, type: 2}
+  m_ParentStateMachine: {fileID: 110721678}
+  m_Position: {x: 71, y: 161, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110274206
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: hero_idle1 0
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: bd9433d153bee91459a2b124485b59a7, type: 2}
+  m_ParentStateMachine: {fileID: 110721678}
+  m_Position: {x: 106, y: 226, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1107 &110709980
 StateMachine:
   serializedVersion: 2
@@ -105,6 +135,8 @@ StateMachine:
   m_DefaultState: {fileID: 110221678}
   m_States:
   - {fileID: 110221678}
+  - {fileID: 110255492}
+  - {fileID: 110274206}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:

@@ -48,6 +48,7 @@ public class TableauCase : MonoBehaviour {
 			{
 			Debug.Log ("Entrée sur la map de test");
 			tableauCases[2,2].SetEtat(EtatCase.Obstacle);
+			tableauCases[2,0].SetEtat(EtatCase.HalfObstacle);
 			tableauCases[3,0].SetEtat(EtatCase.Trap);
 			tableauCases[4,2].SetEtat(EtatCase.Trap);
 			break;

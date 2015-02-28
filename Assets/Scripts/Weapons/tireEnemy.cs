@@ -41,20 +41,24 @@ public class tireEnemy : MonoBehaviour {
 			int compare =dep -cible.mouvements.posX;
 			if (compare <= arme.distance)
 			{
-				
-				for (int cpt = 0; cpt < arme.distance; cpt++)
+				if(hero.mouvements.posY==cible.mouvements.posY)
 				{
-					if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
+					for (int cpt = 0; cpt < arme.distance; cpt++)
 					{
-						verif=true;
-					}
-					else
-					{
-						verif=false;
-						break;
+						if (tableauCourant[hero.mouvements.posX - cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
+						{
+							verif=true;
+						}
+						else
+						{
+							verif=false;
+							break;
+						}
 					}
 				}
-				
+				else{
+					verif=false;
+				}
 			}
 			else{
 				
@@ -81,7 +85,7 @@ public class tireEnemy : MonoBehaviour {
 		return verif;
 		
 	}
-	private void attack(HeroScript cible)
+	private void  attack(HeroScript cible)
 	{
 		
 		switch(arme.effet)
@@ -102,6 +106,32 @@ public class tireEnemy : MonoBehaviour {
 		}   
 	}
 
-	
+	public void setEnemy(string nom)
+	{
+		/*
+		====================IMPORTANT=========================
+		c'est ici que seront ajouter les différent type 
+		d'enemi avec leur degat
+		======================================================		
+		 */
+		switch(nom)
+		{
+		case "squirrel":{
+				arme.nom="squirrel";
+				arme.degat=1;
+				arme.distance=1;
+				arme.effet="Degat";
+				break;
+			}
+
+			default:{
+				arme.nom="squirrel";
+				arme.degat=1;
+				arme.distance=1;
+				arme.effet="Degat";
+				break;
+			}
+		}   
+	}
 	
 }
