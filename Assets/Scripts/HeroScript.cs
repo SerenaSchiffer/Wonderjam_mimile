@@ -5,15 +5,14 @@ public class HeroScript : MonoBehaviour {
 	public bool canMove;
 	public Movement mouvements;
 	public turn_Manager turn;
-
-
+	public tire shooter;
 
 	// Use this for initialization
 	void Start () {
 
 	}
 
-	void Update() {
+	void Update(){
 	}
 
 
@@ -58,7 +57,6 @@ public class HeroScript : MonoBehaviour {
 				}
 			}
 		}
-
 	}
 
 
