@@ -18,7 +18,11 @@ public class TableauCase : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         tableauCases = new Case[50, 3];
-        tableauCases[0, 0] = new Case(EtatCase.Empty);
+
+        foreach (Case cell in tableauCases)
+        {
+            cell = new Case(EtatCase.Empty);
+        }
 	}
 	
 	// Update is called once per frame
