@@ -264,8 +264,8 @@ TextureImporter:
         y: 1191
         width: 169
         height: 287
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .569720566, y: .838702142}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: st2_hairtop
       rect:
@@ -284,8 +284,8 @@ TextureImporter:
         y: 1193
         width: 176
         height: 292
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .466526389, y: .711846769}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: st2_eyebrows
       rect:
@@ -354,18 +354,18 @@ TextureImporter:
         y: 632
         width: 161
         height: 202
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .317038596, y: .733321369}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: st2_armleft
       rect:
         serializedVersion: 2
         x: 969
-        y: 564
+        y: 567
         width: 183
         height: 184
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .70925653, y: .772155404}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: st2_hips
       rect:
@@ -380,12 +380,12 @@ TextureImporter:
     - name: st2_legleft
       rect:
         serializedVersion: 2
-        x: 1150
-        y: 64
+        x: 1147
+        y: 70
         width: 134
         height: 225
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .609913409, y: .788021803}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: st2_legright
       rect:
@@ -394,8 +394,8 @@ TextureImporter:
         y: 61
         width: 138
         height: 227
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .564036489, y: .811437547}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: st3_hairleft
       rect:
@@ -404,8 +404,8 @@ TextureImporter:
         y: 1122
         width: 207
         height: 297
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .556921303, y: .738034666}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: st3_hairtop
       rect:
@@ -424,8 +424,8 @@ TextureImporter:
         y: 1126
         width: 182
         height: 283
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .580925882, y: .801854014}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: st3_head
       rect:
@@ -460,12 +460,12 @@ TextureImporter:
     - name: st3_armright
       rect:
         serializedVersion: 2
-        x: 2283
+        x: 2286
         y: 761
         width: 189
         height: 225
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .344143987, y: .735654294}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: st3_body
       rect:
@@ -484,8 +484,8 @@ TextureImporter:
         y: 420
         width: 181
         height: 197
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .711568058, y: .784101307}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: st3_hips
       rect:
@@ -514,8 +514,8 @@ TextureImporter:
         y: 48
         width: 130
         height: 236
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .63595438, y: .774597585}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: st3_legright
       rect:
@@ -524,8 +524,8 @@ TextureImporter:
         y: 23
         width: 105
         height: 241
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .5, y: .793345928}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
