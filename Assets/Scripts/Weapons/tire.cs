@@ -36,20 +36,23 @@ public class tire : MonoBehaviour {
 			int compare =dep -cible.mouvements.posX;
                 if (compare <= arme.distance)
                {
-
-                   for (int cpt = 0; cpt < arme.distance; cpt++)
-                 {
-					if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
-                     {
-                        verif=true;
-                     }
-                     else
-                     {
-                         verif=false;
-                         break;
-                     }
-                 }
-                     
+				if(hero.mouvements.posY==cible.mouvements.posY){
+	                   for (int cpt = 0; cpt < arme.distance; cpt++)
+		                 {
+							if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
+		                     {
+		                        verif=true;
+		                     }
+		                     else
+		                     {
+		                         verif=false;
+		                         break;
+		                     }
+		                 }
+				}
+				else{
+					verif=false;
+				}
                }
                 else{
         
