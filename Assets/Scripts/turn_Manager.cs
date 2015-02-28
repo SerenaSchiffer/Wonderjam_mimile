@@ -3,10 +3,6 @@ using System.Collections;
 
 public class turn_Manager : MonoBehaviour {
 
-	public HeroScript hero;
-	public bool Ishero;
-
-
 	
 	// Use this for initialization
 	void Start () {
@@ -18,16 +14,22 @@ public class turn_Manager : MonoBehaviour {
 	
 	}
 		
-	public void tour()
+	public void tour(bool isHero)
 	{
-		if (Ishero) 
+		if (isHero) 
 		{
-			hero.canMove = true;
+			HeroScript hero = GameObject.FindObjectOfType<HeroScript>();
+			hero.canMove=true;
 		} 
 
 		else 
 		{
-
+			EnemyScript[] enemies = GameObject.FindObjectsOfType<EnemyScript>();
+			foreach(EnemyScript enemy in enemies)
+			{
+				enemy.Move();
+			}
+			tour (true);
 		}
 	}
 

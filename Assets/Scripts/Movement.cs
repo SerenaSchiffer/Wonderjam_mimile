@@ -28,8 +28,9 @@ public class Movement : MonoBehaviour {
 	/// <summary>
 	/// Termine le mouvement entamé
 	/// </summary>
-	public void Move(char direction, int posXOrigine, int posYOrigine) // Directions possible : h, b, g, d
+	public bool Move(char direction, int posXOrigine, int posYOrigine) // Directions possible : h, b, g, d
 	{
+		bool resultat = false;
 		Case[,] tableauCourant = Script.tableauCases;
 		Case origine = tableauCourant[posXOrigine, posYOrigine];
 		Case cible;
@@ -45,6 +46,7 @@ public class Movement : MonoBehaviour {
 						origine.SetEtat(EtatCase.Empty);
 						cible.SetEtat(EtatCase.Hero);
 						transform.Translate(new Vector3(cellHeightDecal,cellHeight));
+						resultat=true;
 					}
 					}
 					break;
@@ -60,6 +62,7 @@ public class Movement : MonoBehaviour {
 						origine.SetEtat(EtatCase.Empty);
 						cible.SetEtat(EtatCase.Hero);
 						transform.Translate(new Vector3(-cellHeightDecal,-cellHeight));
+						resultat=true;
 					}
 					}
 					break;
@@ -75,6 +78,7 @@ public class Movement : MonoBehaviour {
 							origine.SetEtat(EtatCase.Empty);
 							cible.SetEtat(EtatCase.Hero);
 							transform.Translate(new Vector3(cellWidth,0));
+							resultat=true;
 						}
 					}
 					break;
@@ -90,10 +94,12 @@ public class Movement : MonoBehaviour {
 							origine.SetEtat(EtatCase.Empty);
 							cible.SetEtat(EtatCase.Hero);
 							transform.Translate(new Vector3(-cellWidth,0));
+							resultat=true;
 						}
 					}
 					break;
 				}
 			}
+		return resultat;
 	}
 }

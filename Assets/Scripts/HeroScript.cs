@@ -4,6 +4,7 @@ using System.Collections;
 public class HeroScript : MonoBehaviour {
 	public bool canMove;
 	public Movement mouvements;
+	public turn_Manager turn;
 	//public GameObject scriptCountainer;
 	// Use this for initialization
 	void Start () {
@@ -20,30 +21,43 @@ public class HeroScript : MonoBehaviour {
 		{
 			int posX = mouvements.posX;
 			int posY = mouvements.posY;
+			bool resultat;
 			if(Input.GetAxis ("Horizontal") == 1)
 			{
-				mouvements.Move('d',posX,posY);
-				canMove=false;
-				turn.tour_Hero();
+				resultat = mouvements.Move('d',posX,posY);
+				if(resultat)
+				{
+					canMove=false;
+					turn.tour (false);
+				}
 
 			}
 			if(Input.GetAxis ("Horizontal") == -1)
 			{
-				mouvements.Move('g',posX,posY);
+				resultat = mouvements.Move('g',posX,posY);
+				if(resultat)
+				{
 				canMove=false;
-				turn.tour_Hero();
+				turn.tour (false);
+				}
 			}
 			if(Input.GetAxis ("Vertical") == 1)
 			{
-				mouvements.Move('h',posX,posY);
+				resultat = mouvements.Move('h',posX,posY);
+				if(resultat)
+				{
 				canMove=false;
-				turn.tour_Hero();
+				turn.tour (false);
+				}
 			}
 			if(Input.GetAxis ("Vertical") == -1)
 			{
-				mouvements.Move('b',posX,posY);
+				resultat = mouvements.Move('b',posX,posY);
+				if(resultat)
+				{
 				canMove=false;
-				turn.tour_Hero();
+				turn.tour (false);
+				}
 			}
 		}
 
