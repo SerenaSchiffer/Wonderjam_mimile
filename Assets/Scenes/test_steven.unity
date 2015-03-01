@@ -1879,6 +1879,10 @@ Prefab:
       propertyPath: hp
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 11421400, guid: 3ee0f724946060043af724a1ab727a0b, type: 2}
+      propertyPath: shootAnim
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11494836, guid: 3ee0f724946060043af724a1ab727a0b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3ee0f724946060043af724a1ab727a0b, type: 2}
@@ -3885,7 +3889,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 872468797}
+      - m_Target: {fileID: 1660452886}
         m_MethodName: changerArme
         m_Mode: 5
         m_Arguments:
@@ -4429,6 +4433,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 988117200}
+  tipes: squirrel
 --- !u!61 &988117197
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4913,6 +4918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 1038897464}
+  tipes: squirrel
 --- !u!1 &1063568428
 GameObject:
   m_ObjectHideFlags: 0
@@ -5328,6 +5334,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 1121374269}
+  tipes: squirrel
 --- !u!61 &1121374266
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6655,6 +6662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: {fileID: 1500187586}
+  tipes: squirrel
 --- !u!61 &1500187583
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -7329,7 +7337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
+  shootAnim: 0
   health: {fileID: 1660452883}
   showdamage: 0
 --- !u!1 &1674518647
@@ -9139,6 +9147,14 @@ Prefab:
       value: 
       objectReference: {fileID: 1660452886}
     - target: {fileID: 11498612, guid: 4c12050548fc82b488596a6a7591129d, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: changerArme
+      objectReference: {fileID: 0}
+    - target: {fileID: 11498634, guid: 4c12050548fc82b488596a6a7591129d, type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1660452886}
+    - target: {fileID: 11498634, guid: 4c12050548fc82b488596a6a7591129d, type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: changerArme
       objectReference: {fileID: 0}
