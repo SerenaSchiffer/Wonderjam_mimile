@@ -20,6 +20,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: Die
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -46,6 +52,26 @@ Transition:
   m_Conditions:
   - m_ConditionMode: 5
     m_ConditionEvent: isMoving
+    m_EventTreshold: 0
+    m_ExitTime: .875
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1101 &110148262
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110221678}
+  m_DstState: {fileID: 110279396}
+  m_TransitionDuration: .125
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Die
     m_EventTreshold: 0
     m_ExitTime: .875
   m_Atomic: 1
@@ -223,7 +249,7 @@ State:
   m_Motions:
   - {fileID: 7400000, guid: c5417c070bd0aae48a6adb38773d14d9, type: 2}
   m_ParentStateMachine: {fileID: 110721678}
-  m_Position: {x: 71, y: 245, z: 0}
+  m_Position: {x: -240, y: 96, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -289,6 +315,9 @@ StateMachine:
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
+      first: {fileID: 110279396}
+      second: []
+    data:
       first: {fileID: 0}
       second: []
     data:
@@ -296,6 +325,7 @@ StateMachine:
       second:
       - {fileID: 110190028}
       - {fileID: 110157922}
+      - {fileID: 110148262}
     data:
       first: {fileID: 110255492}
       second:
