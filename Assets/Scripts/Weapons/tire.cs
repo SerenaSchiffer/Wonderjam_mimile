@@ -3,7 +3,7 @@ using System.Collections;
 
 public class tire : MonoBehaviour {
 
-    
+	public bool shootAnim=true;
     private bool verif=true;
     
 	public HealthScript health;
@@ -27,7 +27,13 @@ public class tire : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (shootAnim)
+		{
+			//GetComponent<Animator> ().SetTrigger ("shoot");
+			Debug.Log ("je tire !");
+			shootAnim=false;
+		}
+
 	}
     public bool tirer(HeroScript hero, EnemyScript cible)
     {
@@ -167,7 +173,7 @@ public class tire : MonoBehaviour {
     }
 	private void attack(EnemyScript cible)
     {
-        
+		shootAnim = true;
         switch(arme.effet)
         {
             case "Degat":{

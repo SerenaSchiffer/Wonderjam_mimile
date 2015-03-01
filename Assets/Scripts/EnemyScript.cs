@@ -148,4 +148,10 @@ public class EnemyScript : MonoBehaviour {
 
 	}
 
+
+	void OnDestroy()
+	{
+		mouvements.Script.tableauCases [mouvements.posX, mouvements.posY].SetEtat (EtatCase.Empty);
+	}
+
 }
