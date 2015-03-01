@@ -1185,7 +1185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
   health: {fileID: 0}
   showdamage: 0
 --- !u!114 &432908287
@@ -2219,7 +2218,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f9f6499b078731b40af6c44132ca01d3, type: 3}
-  m_Color: {r: .367647052, g: .367647052, b: .367647052, a: 1}
+  m_Color: {r: .127929017, g: .124351196, b: .367647052, a: 1}
 --- !u!1 &785986486
 GameObject:
   m_ObjectHideFlags: 0
@@ -2283,7 +2282,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
   health: {fileID: 0}
   showdamage: 0
 --- !u!225 &785986490
@@ -2751,7 +2749,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
   health: {fileID: 0}
   showdamage: 0
 --- !u!225 &863297002
@@ -3223,7 +3220,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 0
   health: {fileID: 0}
   showdamage: 0
 --- !u!225 &1024270479
@@ -3837,7 +3833,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f9f6499b078731b40af6c44132ca01d3, type: 3}
-  m_Color: {r: .367647052, g: .367647052, b: .367647052, a: 1}
+  m_Color: {r: .16788204, g: .164900526, b: .367647052, a: 1}
 --- !u!1 &1311549606
 GameObject:
   m_ObjectHideFlags: 0
@@ -4072,7 +4068,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f9f6499b078731b40af6c44132ca01d3, type: 3}
-  m_Color: {r: .367647052, g: .367647052, b: .367647052, a: 1}
+  m_Color: {r: .214593276, g: .178416952, b: .367647052, a: 1}
 --- !u!1 &1536294248
 GameObject:
   m_ObjectHideFlags: 0
@@ -4122,7 +4118,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f9f6499b078731b40af6c44132ca01d3, type: 3}
-  m_Color: {r: .367647052, g: .367647052, b: .367647052, a: 1}
+  m_Color: {r: .214672834, g: .167603791, b: .367647052, a: 1}
 --- !u!1 &1546522258
 GameObject:
   m_ObjectHideFlags: 0
@@ -4500,7 +4496,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: f9f6499b078731b40af6c44132ca01d3, type: 3}
-  m_Color: {r: .367647052, g: .367647052, b: .367647052, a: 1}
+  m_Color: {r: .205847278, g: .0702854693, b: .367647052, a: 1}
 --- !u!1 &1917145425
 GameObject:
   m_ObjectHideFlags: 0
@@ -4873,7 +4869,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
   health: {fileID: 0}
   showdamage: 0
 --- !u!225 &2054644092
@@ -5379,7 +5374,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
   health: {fileID: 2101232219}
   showdamage: 0
 --- !u!95 &2101232217

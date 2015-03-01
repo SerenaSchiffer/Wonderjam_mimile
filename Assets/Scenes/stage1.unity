@@ -1837,7 +1837,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
   health: {fileID: 0}
   showdamage: 0
 --- !u!114 &432908287
@@ -2886,7 +2885,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
   health: {fileID: 0}
   showdamage: 0
 --- !u!225 &785986490
@@ -3405,7 +3403,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
   health: {fileID: 0}
   showdamage: 0
 --- !u!225 &863297002
@@ -4236,7 +4233,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 0
   health: {fileID: 0}
   showdamage: 0
 --- !u!225 &1024270479
@@ -4632,6 +4628,7 @@ MonoBehaviour:
   range: 1
   damage: 1
   hero: {fileID: 1660452884}
+  arme: 
 --- !u!95 &1038897466
 Animator:
   serializedVersion: 3
@@ -5911,7 +5908,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
   health: {fileID: 1660452883}
   showdamage: 0
 --- !u!1 &1699120442
@@ -6753,7 +6749,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
   health: {fileID: 0}
   showdamage: 0
 --- !u!225 &2054644092
