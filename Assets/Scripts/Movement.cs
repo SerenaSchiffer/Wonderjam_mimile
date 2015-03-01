@@ -51,7 +51,7 @@ public class Movement : MonoBehaviour {
 							posY++;
 							origine.SetEtat(EtatCase.Empty);
 							cible.SetEtat(EtatCase.Hero);
-							target = new Vector3(transform.position.x+cellHeightDecal,transform.position.y+cellHeight,transform.position.z);
+							target = new Vector3(transform.position.x+cellHeightDecal,transform.position.y+cellHeight,transform.position.z+0.25f);
 							isMoving=true;
 							resultat=true;
 						}
@@ -68,7 +68,7 @@ public class Movement : MonoBehaviour {
 							posY--;
 							origine.SetEtat(EtatCase.Empty);
 							cible.SetEtat(EtatCase.Hero);
-							target = new Vector3(transform.position.x-cellHeightDecal,transform.position.y-cellHeight,transform.position.z);
+					target = new Vector3(transform.position.x-cellHeightDecal,transform.position.y-cellHeight,transform.position.z-0.25f);
 							isMoving=true;
 							resultat=true;
 						}
