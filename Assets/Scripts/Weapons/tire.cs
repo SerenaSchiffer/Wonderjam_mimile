@@ -38,16 +38,15 @@ public class tire : MonoBehaviour {
         {
             case "Degat":{
 			if(hero.mouvements.posY==cible.mouvements.posY){
-			if(hero.mouvements.posX>cible.mouvements.posX) {
-				int dep =hero.mouvements.posX;
-				compare =dep -cible.mouvements.posX;
-			}else{
-				int dep =cible.mouvements.posX;
-				compare =dep -hero.mouvements.posX;
-			}
-                if (compare <= arme.distance)
-               {
-
+				if(hero.mouvements.posX>cible.mouvements.posX) {
+					int dep =hero.mouvements.posX;
+					compare =dep -cible.mouvements.posX;
+				}else{
+					int dep =cible.mouvements.posX;
+					compare =dep -hero.mouvements.posX;
+				}
+	            if (compare <= arme.distance)
+	            {
 	                   for (int cpt = 1; cpt <= arme.distance; cpt++)
 		                 {
 							if(arme.distance!=1){
@@ -102,6 +101,11 @@ public class tire : MonoBehaviour {
 						
 						verif= false;
 					}
+				}
+				else{
+					
+					
+					verif= false;
 				}
 			}
 			break;
