@@ -179,6 +179,8 @@ public class tire : MonoBehaviour {
         switch(arme.effet)
         {
             case "Degat":{
+
+				Debug.Log (arme.degat);
 				health=cible.GetComponent<HealthScript>();
 				health.Damage (arme.degat);
 
@@ -232,6 +234,7 @@ public class tire : MonoBehaviour {
                 arme.degat=3;
                 arme.distance=1;
                 arme.effet="Degat";
+			Debug.Log(arme.degat);
                 break;
             }
             case"chat":{
