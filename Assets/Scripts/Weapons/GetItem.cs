@@ -9,6 +9,7 @@ public enum WeaponType
 	Jack,
 	Bone,
 	Cat,
+	bille,
 	Wand1,
 	Wand2,
 	Wand3
@@ -76,6 +77,17 @@ public class GetItem : MonoBehaviour {
 					//Permettre l'utilisation dans l'interface
 					break;
 				}
+
+			case(WeaponType.bille):
+			{
+				
+				Debug.Log ("Tu as pris une bille !");
+				button.GetComponent<CanvasGroup>().interactable = true;
+				isset = true;
+				Invoke ("desactiverPopUp", 5);
+				Destroy (gameObject.renderer);
+				break;
+			}
 			}
 		}
 

@@ -208,6 +208,7 @@ public class tire : MonoBehaviour {
         switch(nom)
         {
             case "roche":{
+			Debug.Log("Roche");
                 arme.nom="roche";
                 arme.degat=1;
                 arme.distance=3;
@@ -215,6 +216,7 @@ public class tire : MonoBehaviour {
                 break;
             }
             case "bille":{
+			Debug.Log ("SVP");
                 arme.nom="bille";
                 arme.degat=2;
                 arme.distance=3;
