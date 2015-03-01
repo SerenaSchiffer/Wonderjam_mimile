@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class HeroScript : MonoBehaviour {
+    private string nomStage;
+    private int nbCaseLevel;
 	public bool canMove;
 	public Movement mouvements;
 	public turn_Manager turn;
@@ -27,7 +29,7 @@ public class HeroScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         canMove = true;
-
+        nomStage = Application.loadedLevelName;
 	}
 
 	void Update(){
@@ -79,6 +81,32 @@ public class HeroScript : MonoBehaviour {
                     canMove = false;
 				}
 			}
+
+            switch (nomStage)
+            {
+                case "stage1":
+                    nbCaseLevel = 26;
+                    break;
+
+                case "stage2":
+                    nbCaseLevel = 29;
+                    break;
+
+                case "stage3":
+                    //TODO: faire un processus de victoire.
+                    break;
+            }
 		}
 	}
+
+    void OnDestroy()
+    {
+        const int buttonWidth = 120;
+		const int buttonHeight = 60;
+
+        if (GUI.Button (new Rect (Screen.width / 2 - (buttonWidth / 2), (1 * Screen.height / 3) - (buttonHeight / 2), buttonWidth, buttonHeight ), "Retry !"))
+        {
+            Debug.Log(Application.loadedLevelName);
+        }
+    }
 }

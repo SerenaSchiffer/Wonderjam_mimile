@@ -3,7 +3,6 @@ using System.Collections;
 
 public class tire : MonoBehaviour {
 
-	public bool shootAnim=true;
     private bool verif=true;
     
 	public HealthScript health;
@@ -21,21 +20,15 @@ public class tire : MonoBehaviour {
     Case[,] tableauCourant;
 	// Use this for initialization
 	void Start () {
-
-
+		arme.nom="roche";
+		arme.degat=1;
+		arme.distance=3;
+		arme.effet="Degat";
+		
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
-
-		if (shootAnim)
-		{
-			//GetComponent<Animator> ().SetTrigger ("shoot");
-			//shootAnim=false;
-			//shootAnim = false;
-		}
-
 	}
     public bool tirer(HeroScript hero, EnemyScript cible)
     {
@@ -57,23 +50,28 @@ public class tire : MonoBehaviour {
 				if(compare==1){
 
 				}else{
-				if (compare <= arme.distance)
-	            {
-					 for (int cpt = 1; cpt <= compare; cpt++)
-		                 {
-							
-							if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Trap)
-			                     {
-			                        verif=true;
-			                     }
-			                     else
-			                     {
-			                         verif=false;
-			                         break;
-			                     }
-
-						}
-				}
+					if (compare <= arme.distance)
+		            {
+						 for (int cpt = 1; cpt <= compare; cpt++)
+			                 {
+								
+							if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Enemy||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Trap)
+				                     {
+				                        verif=true;
+				                     }
+				                     else
+				                     {
+										if (tableauCourant[hero.mouvements.posX + compare, hero.mouvements.posY].GetCase() == EtatCase.Enemy)
+										{
+											verif=true;
+										}else{
+											verif=false;
+											break;
+										}
+				                     }
+								
+							}
+					}
                
                 else{
         
@@ -93,10 +91,10 @@ public class tire : MonoBehaviour {
 					if (compare <= arme.distance)
 					{
 						
-						for (int cpt = 1; cpt <= arme.distance; cpt++)
+						for (int cpt = 1; cpt <= compare; cpt++)
 						{
 							if(arme.distance!=1){
-								if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Trap)
+								if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Enemy||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Trap)
 								{
 									verif=true;
 								}
@@ -175,7 +173,7 @@ public class tire : MonoBehaviour {
     }
 	private void attack(EnemyScript cible)
     {
-		shootAnim = true;
+		gameObject.GetComponent<Animator>().SetTrigger("shoot");
         switch(arme.effet)
         {
             case "Degat":{

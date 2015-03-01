@@ -71,7 +71,7 @@ public class tireEnemy : MonoBehaviour {
 						for (int cpt = 1; cpt <= compare; cpt++)
 						{
 							if(hero.mouvements.posX>cible.mouvements.posX) {
-								if (tableauCourant[hero.mouvements.posX - cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Trap)
+								if (tableauCourant[hero.mouvements.posX - cpt, hero.mouvements.posY].GetCase() == EtatCase.Hero||tableauCourant[hero.mouvements.posX - cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Trap)
 								{
 									verif=true;
 								}
@@ -81,7 +81,7 @@ public class tireEnemy : MonoBehaviour {
 									break;
 								}
 							}else{
-								if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Trap)
+								if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Hero||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Trap)
 								{
 									verif=true;
 								}
@@ -132,7 +132,7 @@ public class tireEnemy : MonoBehaviour {
 						{
 							if(hero.mouvements.posY>cible.mouvements.posY) {
 								if(arme.distance!=1){
-									if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY - cpt].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX , hero.mouvements.posY - cpt].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX , hero.mouvements.posY - cpt].GetCase() == EtatCase.Trap)
+									if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY - cpt].GetCase() == EtatCase.Hero||tableauCourant[hero.mouvements.posX , hero.mouvements.posY - cpt].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX , hero.mouvements.posY - cpt].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX , hero.mouvements.posY - cpt].GetCase() == EtatCase.Trap)
 									{
 										verif=true;
 									}
@@ -144,7 +144,7 @@ public class tireEnemy : MonoBehaviour {
 								}
 							}else{
 								if(arme.distance!=1){
-									if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Trap)
+									if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Hero||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Trap)
 									{
 										verif=true;
 									}
