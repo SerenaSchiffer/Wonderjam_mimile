@@ -2,6 +2,8 @@
 using System.Collections;
 
 public class HeroScript : MonoBehaviour {
+    private string nomStage;
+    private int nbCaseLevel;
 	public bool canMove;
 	public Movement mouvements;
 	public turn_Manager turn;
@@ -17,7 +19,7 @@ public class HeroScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         canMove = true;
-
+        nomStage = Application.loadedLevelName;
 	}
 
 	void Update(){
@@ -69,6 +71,21 @@ public class HeroScript : MonoBehaviour {
                     canMove = false;
 				}
 			}
+
+            switch (nomStage)
+            {
+                case "stage1":
+                    nbCaseLevel = 26;
+                    break;
+
+                case "stage2":
+                    nbCaseLevel = 29;
+                    break;
+
+                case "stage3":
+                    //TODO: faire un processus de victoire.
+                    break;
+            }
 		}
 	}
 
