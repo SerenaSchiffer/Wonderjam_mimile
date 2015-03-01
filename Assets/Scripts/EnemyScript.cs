@@ -35,6 +35,7 @@ public class EnemyScript : MonoBehaviour {
                     if (!isThereObstacle('g') && mouvements.posX < 49)
                     {
                         resultat = mouvements.Move('g', mouvements.posX, mouvements.posY);
+                        mouvements.Script.tableauCases[mouvements.posX, mouvements.posY].SetEtat(EtatCase.Enemy);
                     }
                     else
                     {
@@ -46,6 +47,7 @@ public class EnemyScript : MonoBehaviour {
                     if (!isThereObstacle('d') && mouvements.posX > 0)
                     {
                         resultat = mouvements.Move('d', mouvements.posX, mouvements.posY);
+                        mouvements.Script.tableauCases[mouvements.posX , mouvements.posY].SetEtat(EtatCase.Enemy);
                     }
                     else
                     {
@@ -58,7 +60,7 @@ public class EnemyScript : MonoBehaviour {
                 if (hero.mouvements.posY == mouvements.posY || hero.mouvements.posX == mouvements.posX)
                 {
                     tireEnemy actionEnnemi = this.GetComponent<tireEnemy>();
-                    
+                    Debug.Log("Ennemi attaque");
                     actionEnnemi.tirer(this, hero);
                 }
                 else
@@ -66,8 +68,30 @@ public class EnemyScript : MonoBehaviour {
                     if (enemiEnHaut)
                     {
                         if (!isThereObstacle('b') && mouvements.posY > 0)
-                        {   
+                        {
+                            Debug.Log("NOOOON");
                             resultat = mouvements.Move('b', mouvements.posX, mouvements.posY);
+                            mouvements.Script.tableauCases[mouvements.posX, mouvements.posY].SetEtat(EtatCase.Enemy);
+                        }
+                        else
+                        {
+                            Debug.Log("OUIIII");
+                            if (enemiADroite)
+                            {
+                                if (!isThereObstacle('g') && mouvements.posY < 49)
+                                {
+                                    resultat = mouvements.Move('g', mouvements.posX, mouvements.posY);
+                                    mouvements.Script.tableauCases[mouvements.posX, mouvements.posY].SetEtat(EtatCase.Enemy);
+                                }
+                            }
+                            else
+                            {
+                                if (!isThereObstacle('d') && mouvements.posY > 0)
+                                {
+                                    resultat = mouvements.Move('d', mouvements.posX, mouvements.posY);
+                                    mouvements.Script.tableauCases[mouvements.posX, mouvements.posY].SetEtat(EtatCase.Enemy);
+                                }
+                            }
                         }
                     }
                     else
@@ -75,6 +99,27 @@ public class EnemyScript : MonoBehaviour {
                         if (!isThereObstacle('h') && mouvements.posY < 2)
                         {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
                             resultat = mouvements.Move('h', mouvements.posX, mouvements.posY);
+                            mouvements.Script.tableauCases[mouvements.posX, mouvements.posY].SetEtat(EtatCase.Enemy);
+                        }
+                        else
+                        {
+                            Debug.Log("OUIIII");
+                            if (enemiADroite)
+                            {
+                                if (!isThereObstacle('g') && mouvements.posY < 49)
+                                {
+                                    resultat = mouvements.Move('g', mouvements.posX, mouvements.posY);
+                                    mouvements.Script.tableauCases[mouvements.posX, mouvements.posY].SetEtat(EtatCase.Enemy);
+                                }
+                            }
+                            else
+                            {
+                                if (!isThereObstacle('d') && mouvements.posY > 0)
+                                {
+                                    resultat = mouvements.Move('d', mouvements.posX, mouvements.posY);
+                                    mouvements.Script.tableauCases[mouvements.posX, mouvements.posY].SetEtat(EtatCase.Enemy);
+                                }
+                            }
                         }
                     }
                 }
@@ -142,7 +187,8 @@ public class EnemyScript : MonoBehaviour {
     {
         bool isObstacle;
 
-        isObstacle = (mouvements.Script.tableauCases[x, y].GetCase() == EtatCase.Obstacle || mouvements.Script.tableauCases[x, y].GetCase() == EtatCase.HalfObstacle);
+        isObstacle = (mouvements.Script.tableauCases[x, y].GetCase() == EtatCase.Obstacle || mouvements.Script.tableauCases[x, y].GetCase() == EtatCase.HalfObstacle
+                      || mouvements.Script.tableauCases[x, y].GetCase() == EtatCase.Enemy);
         return isObstacle;
     }
 
