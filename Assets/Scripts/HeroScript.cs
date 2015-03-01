@@ -34,11 +34,12 @@ public class HeroScript : MonoBehaviour {
 	// Update is called once per frame
 	void FixedUpdate ()
     {
+        
 		if (canMove) 
 		{            
 			int posX = mouvements.posX;
 			int posY = mouvements.posY;
-			bool resultat;
+            bool resultat = false;
 			if(Input.GetAxis ("Horizontal") == 1)
 			{
 				resultat = mouvements.Move('d',posX,posY);
@@ -72,31 +73,29 @@ public class HeroScript : MonoBehaviour {
 				}
 			}
 
-            switch (nomStage)
+            if (resultat)
             {
-                case "stage1":
-                    nbCaseLevel = 26;
-                    break;
+                switch (nomStage)
+                {
+                    case "stage1":
+                        {
+                            if (mouvements.posX == 26)
+                                Application.LoadLevel("stage2");
+                        }
+                        break;
 
-                case "stage2":
-                    nbCaseLevel = 29;
-                    break;
+                    case "stage2":
+                        {
+                            if (mouvements.posX == 29)
+                                Application.LoadLevel("stage3");
+                        }
+                        break;
 
-                case "stage3":
-                    //TODO: faire un processus de victoire.
-                    break;
+                    case "stage3":
+                        //TODO: faire un processus de victoire.
+                        break;
+                }
             }
-		}
+		}        
 	}
-
-    void OnDestroy()
-    {
-        const int buttonWidth = 120;
-		const int buttonHeight = 60;
-
-        if (GUI.Button (new Rect (Screen.width / 2 - (buttonWidth / 2), (1 * Screen.height / 3) - (buttonHeight / 2), buttonWidth, buttonHeight ), "Retry !"))
-        {
-            Debug.Log(Application.loadedLevelName);
-        }
-    }
 }
