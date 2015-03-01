@@ -48,16 +48,18 @@ public class tire : MonoBehaviour {
 				if(hero.mouvements.posY==cible.mouvements.posY){
 	                   for (int cpt = 1; cpt <= arme.distance; cpt++)
 		                 {
-							if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
-		                     {
-		                        verif=true;
-		                     }
-		                     else
-		                     {
-		                         verif=false;
-		                         break;
-		                     }
-		                 }
+							if(arme.distance!=1){
+								if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
+			                     {
+			                        verif=true;
+			                     }
+			                     else
+			                     {
+			                         verif=false;
+			                         break;
+			                     }
+							}
+						}
 				}
 				else{
 					verif=false;
@@ -74,7 +76,7 @@ public class tire : MonoBehaviour {
             case "Repousser":{
                  for(int cpt=0;cpt<arme.distance;cpt++)
                  {
-				if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
+					if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
                      {
                         verif=true;
                      }
@@ -102,10 +104,7 @@ public class tire : MonoBehaviour {
                          }
                         
                      }
-                     else
-                     {
-                        verif= false;
-                     }
+                    
                  break;
                 }     
             default:{
