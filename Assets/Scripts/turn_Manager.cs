@@ -27,6 +27,7 @@ public class turn_Manager : MonoBehaviour {
 			EnemyScript[] enemies = GameObject.FindObjectsOfType<EnemyScript>();
 			foreach(EnemyScript enemy in enemies)
 			{
+                enemy.DansLaChampDeLaCamera();
                 enemy.Move();
 			}
 			tour (true);
