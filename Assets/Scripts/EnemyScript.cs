@@ -12,9 +12,15 @@ public class EnemyScript : MonoBehaviour {
 	private bool spawned;
     private bool resultat;
 	public string arme;
+	public void setWeapon(string weap){
+		arme=weap;
+		
+	}
+
 	// Use this for initialization
 	void Start () {
         spawned = false;
+
 	}
 	
 	// Update is called once per frame

@@ -6,10 +6,18 @@ public class HeroScript : MonoBehaviour {
 	public Movement mouvements;
 	public turn_Manager turn;
 	public tire shooter;
-
+	public void setArme(string arme){
+		EnemyScript[] enemies = GameObject.FindObjectsOfType<EnemyScript>();
+		foreach(EnemyScript enemy in enemies)
+		{
+			
+			enemy.setWeapon(arme);
+		}
+	}
 	// Use this for initialization
 	void Start () {
         canMove = true;
+
 	}
 
 	void Update(){
