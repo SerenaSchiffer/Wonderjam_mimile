@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 public enum WeaponType
 {
@@ -21,6 +22,9 @@ public class GetItem : MonoBehaviour {
 	private bool itemTaken;
 	public TableauCase Script;
 
+	public Transform button;
+	public Texture2D atexture;
+
 
 	public void GiveWeaponToPlayer(WeaponType weaponType)
 	{
@@ -32,6 +36,9 @@ public class GetItem : MonoBehaviour {
 					Debug.Log ("Tu as pris une roche !");
 					Destroy (gameObject);
 					Script.tableauCases[posX,posY].SetEtat(EtatCase.Empty);
+					button.GetComponent<CanvasGroup>().interactable = true;
+					OnGUI();
+					
 					break;
 				}
 			case(WeaponType.Bone):
@@ -96,6 +103,15 @@ public class GetItem : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-
 	}
+
+
+	void OnGUI() {
+		if (!atexture) {
+			Debug.LogError("Assign a Texture in the inspector.");
+			return;
+		}
+		GUI.DrawTexture(new Rect(10, 10, 60, 60), atexture, ScaleMode.ScaleToFit, true, 10.0F);
+	}
+
 }
