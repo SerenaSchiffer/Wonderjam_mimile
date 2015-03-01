@@ -12,7 +12,7 @@ public class HealthScript : MonoBehaviour {
 	{
 		hp -= damage;
 		if (healthBarSlider != null) {
-			healthBarSlider.value -= 1;  //reduce health
+			healthBarSlider.value -=damage;  //reduce health
 		}
 
 		if (hp <= 0) 
