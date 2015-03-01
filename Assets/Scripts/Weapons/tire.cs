@@ -106,8 +106,10 @@ public class tire : MonoBehaviour {
 						for (int cpt = 1; cpt <= compare; cpt++)
 						{
 							if(arme.distance!=1){
+                                Debug.Log("distance != 1");
 								if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Enemy||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Trap)
 								{
+                                    Debug.Log("dans if long");
 									verif=true;
 								}
 								else
@@ -194,9 +196,7 @@ public class tire : MonoBehaviour {
 	}*/
 	private void attack(EnemyScript cible)
 	{
-
-
-
+        GetComponent<Animator>().SetTrigger("shoot");
 
         switch(arme.effet)
         {
