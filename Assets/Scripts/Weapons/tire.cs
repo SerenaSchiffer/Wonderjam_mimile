@@ -20,7 +20,7 @@ public class tire : MonoBehaviour {
 	void Start () {
 		arme.nom="roche";
 		arme.degat=1;
-		arme.distance=1;
+		arme.distance=2;
 		arme.effet="Degat";
 
 	}
@@ -45,12 +45,16 @@ public class tire : MonoBehaviour {
 					int dep =cible.mouvements.posX;
 					compare =dep -hero.mouvements.posX;
 				}
-	            if (compare <= arme.distance)
+				//compare=2;
+				if(compare==1){
+
+				}else{
+				if (compare <= arme.distance)
 	            {
-	                   for (int cpt = 1; cpt <= arme.distance; cpt++)
+					 for (int cpt = 1; cpt <= compare; cpt++)
 		                 {
-							if(arme.distance!=1){
-								if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
+							
+							if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Trap)
 			                     {
 			                        verif=true;
 			                     }
@@ -59,7 +63,7 @@ public class tire : MonoBehaviour {
 			                         verif=false;
 			                         break;
 			                     }
-							}
+
 						}
 				}
                
@@ -68,7 +72,8 @@ public class tire : MonoBehaviour {
         
                     verif= false;
                 }
-			}else{
+			}
+		}else{
 				if(hero.mouvements.posX==cible.mouvements.posX){
 					if(hero.mouvements.posY>cible.mouvements.posY) {
 						int dep =hero.mouvements.posY;
@@ -83,7 +88,7 @@ public class tire : MonoBehaviour {
 						for (int cpt = 1; cpt <= arme.distance; cpt++)
 						{
 							if(arme.distance!=1){
-								if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Empty)
+								if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Trap)
 								{
 									verif=true;
 								}
@@ -173,7 +178,7 @@ public class tire : MonoBehaviour {
                 break;
             }
             case "Repousser":{
-                cible.mouvements.posX += 2;                
+                /*faire reculer de 2 l'enemi*/                
                 break;
             }
             case "Immobilise":{
@@ -194,7 +199,7 @@ public class tire : MonoBehaviour {
             case "roche":{
                 arme.nom="roche";
                 arme.degat=1;
-                arme.distance=1;
+                arme.distance=2;
                 arme.effet="Degat";
                 break;
             }
