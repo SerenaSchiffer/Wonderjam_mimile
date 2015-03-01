@@ -159,6 +159,7 @@ public class tire : MonoBehaviour {
                 arme.nom="roche";
                 arme.degat=1;
                 arme.distance=1;
+                arme.distance=2;
                 arme.effet="Degat";
                 break;
             }

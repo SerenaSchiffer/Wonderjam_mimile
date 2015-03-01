@@ -15,6 +15,7 @@ GameObject:
   - 114: {fileID: 11442626}
   - 212: {fileID: 21242626}
   - 61: {fileID: 6163866}
+  - 114: {fileID: 11440184}
   m_Layer: 0
   m_Name: Ecureuil
   m_TagString: Untagged
@@ -257,7 +258,7 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 195780}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ea728da1cf35f3d48b881dd0b07c5f0d, type: 2}
   m_CullingMode: 0
@@ -309,6 +310,18 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &11440184
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 195780}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 213686c5ff756f84cb416436eda9f6a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 0}
 --- !u!114 &11442622
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -348,7 +361,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7108d1be2c1a7b46b6bde5828c72fa7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isHero: 1
+  isHero: 0
   posX: 6
   posY: 1
   Script: {fileID: 0}
