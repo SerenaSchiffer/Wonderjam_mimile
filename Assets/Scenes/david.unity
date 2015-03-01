@@ -275,9 +275,7 @@ GameObject:
   - 114: {fileID: 225528824}
   - 114: {fileID: 225528823}
   - 212: {fileID: 225528822}
-  - 61: {fileID: 225528826}
   - 114: {fileID: 225528821}
-  - 114: {fileID: 225528827}
   m_Layer: 0
   m_Name: Ecureuil
   m_TagString: Untagged
@@ -383,9 +381,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHero: 1
-  posX: 1
+  posX: 3
   posY: 1
-  Script: {fileID: 225528827}
+  Script: {fileID: 0}
   speed: 2
 --- !u!114 &225528824
 MonoBehaviour:
@@ -414,33 +412,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouvements: {fileID: 225528823}
-  range: 1
-  damage: 1
+  range: 0
+  damage: 0
   hero: {fileID: 0}
---- !u!61 &225528826
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 6163866, guid: afb328f0aaa6ff24d9d4d2fcaf3b62d4,
-    type: 2}
-  m_PrefabInternal: {fileID: 1098805292}
-  m_GameObject: {fileID: 225528817}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Size: {x: 6.95839167, y: 5.55485916}
-  m_Center: {x: .479195118, y: -.277428925}
---- !u!114 &225528827
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 225528817}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5d1a8031d3b41741b3e0fd9f4430b46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mapNumber: 0
 --- !u!1 &305501520
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +540,7 @@ Transform:
   m_PrefabInternal: {fileID: 1098805292}
   m_GameObject: {fileID: 394877744}
   m_LocalRotation: {x: 0, y: 0, z: -.130886599, w: .991397381}
-  m_LocalPosition: {x: -.379999995, y: -.200000003, z: -.00999999978}
+  m_LocalPosition: {x: -.419999987, y: -.200000003, z: -.00999999978}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 225528818}
@@ -760,7 +734,6 @@ GameObject:
   - 114: {fileID: 766550637}
   - 95: {fileID: 766550636}
   - 114: {fileID: 766550635}
-  - 114: {fileID: 766550640}
   m_Layer: 0
   m_Name: Hero 1
   m_TagString: Untagged
@@ -840,7 +813,7 @@ MonoBehaviour:
   isHero: 0
   posX: 0
   posY: 1
-  Script: {fileID: 766550640}
+  Script: {fileID: 0}
   speed: 2
 --- !u!114 &766550638
 MonoBehaviour:
@@ -871,19 +844,6 @@ MonoBehaviour:
   canMove: 1
   mouvements: {fileID: 766550637}
   turn: {fileID: 0}
-  shooter: {fileID: 766550635}
---- !u!114 &766550640
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 766550633}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c5d1a8031d3b41741b3e0fd9f4430b46, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mapNumber: 0
 --- !u!1 &838682903
 GameObject:
   m_ObjectHideFlags: 0
@@ -1257,18 +1217,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 495780, guid: afb328f0aaa6ff24d9d4d2fcaf3b62d4, type: 2}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 495784, guid: afb328f0aaa6ff24d9d4d2fcaf3b62d4, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -.379999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 11442626, guid: afb328f0aaa6ff24d9d4d2fcaf3b62d4, type: 2}
-      propertyPath: Script
-      value: 
-      objectReference: {fileID: 225528827}
-    - target: {fileID: 11442626, guid: afb328f0aaa6ff24d9d4d2fcaf3b62d4, type: 2}
-      propertyPath: posX
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -1728,14 +1676,6 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 11430636, guid: a3a0aa6a1bc03814a9a3f15a20414781, type: 2}
-      propertyPath: shooter
-      value: 
-      objectReference: {fileID: 766550635}
-    - target: {fileID: 11430632, guid: a3a0aa6a1bc03814a9a3f15a20414781, type: 2}
-      propertyPath: Script
-      value: 
-      objectReference: {fileID: 766550640}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a3a0aa6a1bc03814a9a3f15a20414781, type: 2}
   m_RootGameObject: {fileID: 766550633}
