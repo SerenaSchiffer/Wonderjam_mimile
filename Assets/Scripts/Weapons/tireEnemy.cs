@@ -136,7 +136,7 @@ public class tireEnemy : MonoBehaviour {
 	private void  attack(HeroScript cible)
 	{
 		health=cible.GetComponent<HealthScript>();
-		health.hp -= arme.degat;  
+		health.Damage (arme.degat);  
 	}
 
 	public void setEnemy(string nom)
