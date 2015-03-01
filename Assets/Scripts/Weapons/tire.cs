@@ -14,6 +14,9 @@ public class tire : MonoBehaviour {
         public int distance;
         public string effet;
     }
+
+	public int showdamage;
+
     armeJoueur arme=new armeJoueur();
     Case[,] tableauCourant;
 	// Use this for initialization
@@ -24,6 +27,8 @@ public class tire : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		
+
 		if (shootAnim)
 		{
 			//GetComponent<Animator> ().SetTrigger ("shoot");
@@ -197,6 +202,8 @@ public class tire : MonoBehaviour {
     }
     public void changerArme(string nom)
     {
+
+
         switch(nom)
         {
             case "roche":{
@@ -242,6 +249,7 @@ public class tire : MonoBehaviour {
                 break;
             }
             default:{
+			Debug.Log("je bug");
                 arme.nom="roche";
                 arme.degat=1;
                 arme.distance=2;
