@@ -46,6 +46,7 @@ TextureImporter:
     21300082: st3_mouth
     21300084: st3_legleft
     21300086: st3_legright
+    21300088: st3_eyeClosed
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -440,20 +441,20 @@ TextureImporter:
     - name: st3_eyesOpen
       rect:
         serializedVersion: 2
-        x: 1664
-        y: 909
+        x: 1662
+        y: 912
         width: 174
         height: 147
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: st3_eyesClosed
+    - name: st3_eyeClosed
       rect:
         serializedVersion: 2
-        x: 1673
-        y: 667
-        width: 194
-        height: 175
+        x: 1666
+        y: 699
+        width: 174
+        height: 147
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}

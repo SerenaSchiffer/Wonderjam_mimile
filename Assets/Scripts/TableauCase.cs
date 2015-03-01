@@ -92,6 +92,7 @@ public class TableauCase : MonoBehaviour {
 			tableauCases[10,0].SetEtat(EtatCase.Obstacle);
 			tableauCases[10,2].SetEtat(EtatCase.Obstacle);
 			tableauCases[12,0].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[12,1].SetEtat (EtatCase.Obstacle);
 			tableauCases[14,2].SetEtat(EtatCase.Obstacle);
 			tableauCases[15,1].SetEtat(EtatCase.Obstacle);
 			tableauCases[15,2].SetEtat(EtatCase.Obstacle);
@@ -99,7 +100,7 @@ public class TableauCase : MonoBehaviour {
 			tableauCases[18,0].SetEtat(EtatCase.Obstacle);
 			tableauCases[18,1].SetEtat(EtatCase.Obstacle);
 			tableauCases[20,1].SetEtat(EtatCase.HalfObstacle);
-			tableauCases[20,1].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[20,2].SetEtat(EtatCase.HalfObstacle);
 			tableauCases[22,1].SetEtat(EtatCase.HalfObstacle);
 			tableauCases[23,1].SetEtat(EtatCase.Obstacle);
 			tableauCases[25,0].SetEtat(EtatCase.Obstacle);

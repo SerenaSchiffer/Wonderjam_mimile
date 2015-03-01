@@ -14,6 +14,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: Die
+    m_Type: 9
+    m_DefaultFloat: 0
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 3
     m_Name: Base Layer
@@ -59,13 +65,63 @@ Transition:
   m_TransitionOffset: 0
   m_Conditions:
   - m_ConditionMode: 5
-    m_ConditionEvent: 
+    m_ConditionEvent: Die
     m_EventTreshold: 0
     m_ExitTime: .482758582
   m_Atomic: 1
   m_Solo: 0
   m_Mute: 0
   m_CanTransitionToSelf: 0
+--- !u!1101 &110167040
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110263824}
+  m_DstState: {fileID: 110249016}
+  m_TransitionDuration: .117187493
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 1
+    m_ConditionEvent: Die
+    m_EventTreshold: 0
+    m_ExitTime: .8828125
+  m_Atomic: 1
+  m_Solo: 1
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1102 &110249016
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: hero_creepy_death
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: b2346df67f1e98b4492ff506546ba0be, type: 2}
+  m_ParentStateMachine: {fileID: 110766060}
+  m_Position: {x: 588, y: 96, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110260884
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: hero_spooky_death
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: b2346df67f1e98b4492ff506546ba0be, type: 2}
+  m_ParentStateMachine: {fileID: 110766060}
+  m_Position: {x: 636, y: 216, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1102 &110263824
 State:
   m_ObjectHideFlags: 3
@@ -75,7 +131,7 @@ State:
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 7aefe75a6697ae34b88591cfbdea4397, type: 2}
+  - {fileID: 7400000, guid: 690bed52866cdd144b2138d733b65d90, type: 2}
   m_ParentStateMachine: {fileID: 110766060}
   m_Position: {x: 336, y: 48, z: 0}
   m_IKOnFeet: 0
@@ -107,13 +163,19 @@ StateMachine:
   m_States:
   - {fileID: 110266060}
   - {fileID: 110263824}
+  - {fileID: 110249016}
+  - {fileID: 110260884}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:
     data:
+      first: {fileID: 110249016}
+      second: []
+    data:
       first: {fileID: 110263824}
       second:
       - {fileID: 110104046}
+      - {fileID: 110167040}
     data:
       first: {fileID: 110266060}
       second:
