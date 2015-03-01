@@ -40,7 +40,6 @@ public class EnemyScript : MonoBehaviour {
                     {
                         if (mouvements.posY == 2)
                         {
-                            Debug.Log("2");
                             if (!isThereObstacle('b') && mouvements.posY > 0)
                             {
                                 resultat = mouvements.Move('b', mouvements.posX, mouvements.posY);
@@ -48,7 +47,6 @@ public class EnemyScript : MonoBehaviour {
                         }
                         else if (mouvements.posY == 0)
                         {
-                            Debug.Log("0");
                             if (!isThereObstacle('h') && mouvements.posY < 2)
                             {
                                 resultat = mouvements.Move('h', mouvements.posX, mouvements.posY);
@@ -56,7 +54,6 @@ public class EnemyScript : MonoBehaviour {
                         }
                         else
                         {
-                            Debug.Log("1");
                             if (!isThereObstacle('h') && mouvements.posY < 2)
                             {
                                 resultat = mouvements.Move('h', mouvements.posX, mouvements.posY);
@@ -81,9 +78,8 @@ public class EnemyScript : MonoBehaviour {
             {
                 if (hero.mouvements.posY == mouvements.posY || hero.mouvements.posX == mouvements.posX)
                 {
-                    //TODO: vérifier si le héro est dans le range de l'ennemi.
                     tireEnemy actionEnnemi = this.GetComponent<tireEnemy>();
-                    Debug.Log("Ennemi attaque");
+                    
                     actionEnnemi.tirer(this, hero);
                 }
                 else
@@ -174,7 +170,8 @@ public class EnemyScript : MonoBehaviour {
 	public void OnMouseUp()
 	{
 		hero.shooter.changerArme ("roche");
-		Debug.Log (hero.shooter.tirer (hero, this));
+        if (hero.shooter.tirer(hero, this))
+            hero.turn.tour(false);
 
 	}
 
