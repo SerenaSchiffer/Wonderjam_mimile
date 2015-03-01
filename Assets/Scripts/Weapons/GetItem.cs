@@ -56,11 +56,19 @@ public class GetItem : MonoBehaviour {
 			case(WeaponType.Jack):
 				{
 					//Permettre l'utilisation dans l'interface
+					button.GetComponent<CanvasGroup>().interactable = true;
+					isset=true;
+					Invoke("desactiverPopUp", 5);
+					Destroy (gameObject.renderer);
+					Script.tableauCases[posX,posY].SetEtat(EtatCase.Empty);
 					break;
 				}
 			case(WeaponType.Marble):
 				{
 					//Permettre l'utilisation dans l'interface
+					button.GetComponent<CanvasGroup>().interactable = true;
+					isset=true;
+					Invoke("desactiverPopUp", 5);
 					break;
 				}
 			case(WeaponType.Cat):
