@@ -11,7 +11,7 @@ public class EnemyScript : MonoBehaviour {
     private GameObject enemy;
 	private bool spawned;
     private bool resultat;
-	public string arme;
+	public string arme="roche";
 	public void setWeapon(string weap){
 		arme=weap;
 		
