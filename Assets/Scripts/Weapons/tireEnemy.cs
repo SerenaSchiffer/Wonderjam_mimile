@@ -12,18 +12,19 @@ public class tireEnemy : MonoBehaviour {
 	private bool verif=true;
 	
 	public HealthScript health;
-	
+	public string tipes="squirrel";
 	public struct armeJoueur{
 		public string nom;
 		public int degat;
 		public int distance;
 		public string effet;
 	}
+	private int check;
 	armeJoueur arme=new armeJoueur();
 	Case[,] tableauCourant;
 	// Use this for initialization
 	void Start () {
-
+		setEnemy(tipes);
 		
 	}
 	
@@ -52,18 +53,45 @@ public class tireEnemy : MonoBehaviour {
 				}else{
 					if (compare <= arme.distance)
 					{
+						int check;
+						if(hero.mouvements.posY==1)
+						{
+							check=1;
+						}else{
+							if(hero.mouvements.posY==2)
+							{
+								check=2;
+							}else{
+								if(hero.mouvements.posY==0)
+								{
+									check=2;
+								}
+							}
+						}
 						for (int cpt = 1; cpt <= compare; cpt++)
 						{
-							
-							if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Trap)
-							{
-								verif=true;
+							if(hero.mouvements.posX>cible.mouvements.posX) {
+								if (tableauCourant[hero.mouvements.posX - cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Trap)
+								{
+									verif=true;
+								}
+								else
+								{
+									verif=false;
+									break;
+								}
+							}else{
+								if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Trap)
+								{
+									verif=true;
+								}
+								else
+								{
+									verif=false;
+									break;
+								}
 							}
-							else
-							{
-								verif=false;
-								break;
-							}
+
 							
 						}
 					}
@@ -85,20 +113,49 @@ public class tireEnemy : MonoBehaviour {
 					}
 					if (compare <= arme.distance)
 					{
-						
-						for (int cpt = 1; cpt <= arme.distance; cpt++)
+
+						if(hero.mouvements.posY==1)
 						{
-							if(arme.distance!=1){
-								if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Trap)
+							check=1;
+						}else{
+							if(hero.mouvements.posY==2)
+							{
+								check=2;
+							}else{
+								if(hero.mouvements.posY==0)
 								{
-									verif=true;
-								}
-								else
-								{
-									verif=false;
-									break;
+									check=2;
 								}
 							}
+						}
+						for (int cpt = 1; cpt <= check; cpt++)
+						{
+							if(hero.mouvements.posY>cible.mouvements.posY) {
+								if(arme.distance!=1){
+									if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY - cpt].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX , hero.mouvements.posY - cpt].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX , hero.mouvements.posY - cpt].GetCase() == EtatCase.Trap)
+									{
+										verif=true;
+									}
+									else
+									{
+										verif=false;
+										break;
+									}
+								}
+							}else{
+								if(arme.distance!=1){
+									if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Trap)
+									{
+										verif=true;
+									}
+									else
+									{
+										verif=false;
+										break;
+									}
+								}
+							}
+
 						}
 					}
 					
