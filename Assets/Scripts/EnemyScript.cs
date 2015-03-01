@@ -144,7 +144,10 @@ public class EnemyScript : MonoBehaviour {
 	public void OnMouseUp()
 	{
 		hero.shooter.changerArme ("roche");
-		Debug.Log (hero.shooter.tirer (hero, this));
+		if(hero.shooter.tirer (hero, this));
+		{
+			hero.turn.tour (false);
+		}
 
 	}
 
