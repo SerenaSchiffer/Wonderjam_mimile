@@ -12,7 +12,6 @@ public class HealthScript : MonoBehaviour {
 	{
 		hp -= damage;
 		if (healthBarSlider != null) {
-			Debug.Log(damage);
 			healthBarSlider.value -= damage;  //reduce health
 		}
 

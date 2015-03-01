@@ -71,4 +71,15 @@ public class HeroScript : MonoBehaviour {
 			}
 		}
 	}
+
+    void OnDestroy()
+    {
+        const int buttonWidth = 120;
+		const int buttonHeight = 60;
+
+        if (GUI.Button (new Rect (Screen.width / 2 - (buttonWidth / 2), (1 * Screen.height / 3) - (buttonHeight / 2), buttonWidth, buttonHeight ), "Retry !"))
+        {
+            Debug.Log(Application.loadedLevelName);
+        }
+    }
 }
