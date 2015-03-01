@@ -175,6 +175,7 @@ public class tire : MonoBehaviour {
         if(verif==true)
         {
             attack(cible);
+			//spawnProjectile (hero);
         }
         else
         {
@@ -183,12 +184,20 @@ public class tire : MonoBehaviour {
         return verif;
 
     }
+	//public Rigidbody project;
+
+	
+	/*public void spawnProjectile(HeroScript hero)
+	{
+
+		Instantiate (project);
+	}*/
 	private void attack(EnemyScript cible)
-    {
+	{
 
-	//	GameObject instance = Instantiate(Resources.Load("Project"),transform.position, transform.rotation) as GameObject;
 
-		gameObject.GetComponent<Animator>().SetTrigger("shoot");
+
+
         switch(arme.effet)
         {
             case "Degat":{
