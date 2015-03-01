@@ -26,8 +26,8 @@ public class tire : MonoBehaviour {
 	void Update () {
 		if (shootAnim)
 		{
-			GetComponent<Animator> ().SetTrigger ("shoot");
-			shootAnim=false;
+			//GetComponent<Animator> ().SetTrigger ("shoot");
+			//shootAnim=false;
 			//shootAnim = false;
 		}
 
