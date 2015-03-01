@@ -38,32 +38,7 @@ public class EnemyScript : MonoBehaviour {
                     }
                     else
                     {
-                        if (mouvements.posY == 2)
-                        {
-                            if (!isThereObstacle('b') && mouvements.posY > 0)
-                            {
-                                resultat = mouvements.Move('b', mouvements.posX, mouvements.posY);
-                            }
-                        }
-                        else if (mouvements.posY == 0)
-                        {
-                            if (!isThereObstacle('h') && mouvements.posY < 2)
-                            {
-                                resultat = mouvements.Move('h', mouvements.posX, mouvements.posY);
-                            }
-                        }
-                        else
-                        {
-                            if (!isThereObstacle('h') && mouvements.posY < 2)
-                            {
-                                resultat = mouvements.Move('h', mouvements.posX, mouvements.posY);
-                            }
-                            else if (!isThereObstacle('b') && mouvements.posY > 0)
-                            {
-                                resultat = mouvements.Move('b', mouvements.posX, mouvements.posY);
-                            }
-                        }
-
+                        eviterObstacle();
                     }
                 }
                 else
@@ -71,6 +46,10 @@ public class EnemyScript : MonoBehaviour {
                     if (!isThereObstacle('d') && mouvements.posX > 0)
                     {
                         resultat = mouvements.Move('d', mouvements.posX, mouvements.posY);
+                    }
+                    else
+                    {
+                        eviterObstacle();
                     }
                 }
             }
@@ -175,6 +154,34 @@ public class EnemyScript : MonoBehaviour {
 
 	}
 
+    private void eviterObstacle()
+    {
+        if (mouvements.posY == 2)
+        {
+            if (!isThereObstacle('b') && mouvements.posY > 0)
+            {
+                resultat = mouvements.Move('b', mouvements.posX, mouvements.posY);
+            }
+        }
+        else if (mouvements.posY == 0)
+        {
+            if (!isThereObstacle('h') && mouvements.posY < 2)
+            {
+                resultat = mouvements.Move('h', mouvements.posX, mouvements.posY);
+            }
+        }
+        else
+        {
+            if (!isThereObstacle('h') && mouvements.posY < 2)
+            {
+                resultat = mouvements.Move('h', mouvements.posX, mouvements.posY);
+            }
+            else if (!isThereObstacle('b') && mouvements.posY > 0)
+            {
+                resultat = mouvements.Move('b', mouvements.posX, mouvements.posY);
+            }
+        }
+    }
 
 	void OnDestroy()
 	{
