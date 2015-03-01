@@ -262,15 +262,15 @@ public class tire : MonoBehaviour {
             }
             case"chat":{
                 arme.nom="chat";
-                arme.degat=0;
+                arme.degat=5;
                 arme.distance=3;
 			arme.effet="Degat";
                 break;
             }
             case"baguette":{//indeterminer
                 arme.nom="baguette";
-                arme.degat=1;
-                arme.distance=2;
+                arme.degat=15;
+                arme.distance=4;
                 arme.effet="Degat";
                 break;
             }
