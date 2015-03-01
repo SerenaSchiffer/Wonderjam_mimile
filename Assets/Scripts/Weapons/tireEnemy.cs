@@ -41,21 +41,21 @@ public class tireEnemy : MonoBehaviour {
 		switch(arme.effet)
 		{
 		case "Degat":{
-			if(hero.mouvements.posX>cible.mouvements.posX) {
-				int dep =hero.mouvements.posX;
-				compare =dep -cible.mouvements.posX;
-			}else{
-				int dep =cible.mouvements.posX;
-				compare =dep -hero.mouvements.posX;
-			}
-			if (compare <= arme.distance)
-			{
-				if(hero.mouvements.posY==cible.mouvements.posY)
+			if(hero.mouvements.posY==cible.mouvements.posY){
+				if(hero.mouvements.posX>cible.mouvements.posX) {
+					int dep =hero.mouvements.posX;
+					compare =dep -cible.mouvements.posX;
+				}else{
+					int dep =cible.mouvements.posX;
+					compare =dep -hero.mouvements.posX;
+				}
+				if (compare <= arme.distance)
 				{
-					for (int cpt = 0; cpt < arme.distance; cpt++)
+					
+					for (int cpt = 1; cpt <= arme.distance; cpt++)
 					{
 						if(arme.distance!=1){
-							if (tableauCourant[hero.mouvements.posX - cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
+							if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
 							{
 								verif=true;
 							}
@@ -67,19 +67,50 @@ public class tireEnemy : MonoBehaviour {
 						}
 					}
 				}
+				
 				else{
-					verif=false;
+					
+					
+					verif= false;
+				}
+			}else{
+				if(hero.mouvements.posX==cible.mouvements.posX){
+					if(hero.mouvements.posY>cible.mouvements.posY) {
+						int dep =hero.mouvements.posY;
+						compare =dep -cible.mouvements.posY;
+					}else{
+						int dep =cible.mouvements.posY;
+						compare =dep -hero.mouvements.posY;
+					}
+					if (compare <= arme.distance)
+					{
+						
+						for (int cpt = 1; cpt <= arme.distance; cpt++)
+						{
+							if(arme.distance!=1){
+								if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Empty)
+								{
+									verif=true;
+								}
+								else
+								{
+									verif=false;
+									break;
+								}
+							}
+						}
+					}
+					
+					else{
+						
+						
+						verif= false;
+					}
 				}
 			}
-			else{
-				
-				
-				verif= false;
-			}
-			
 			break;
 		}
-		
+			
 		default:{
 			
 			break;

@@ -31,11 +31,13 @@ public class tire : MonoBehaviour {
 	}
     public bool tirer(HeroScript hero, EnemyScript cible)
     {
+		verif = true;
 		int compare;
 		tableauCourant = hero.mouvements.Script.tableauCases;
         switch(arme.effet)
         {
             case "Degat":{
+			if(hero.mouvements.posY==cible.mouvements.posY){
 			if(hero.mouvements.posX>cible.mouvements.posX) {
 				int dep =hero.mouvements.posX;
 				compare =dep -cible.mouvements.posX;
@@ -45,7 +47,7 @@ public class tire : MonoBehaviour {
 			}
                 if (compare <= arme.distance)
                {
-				if(hero.mouvements.posY==cible.mouvements.posY){
+
 	                   for (int cpt = 1; cpt <= arme.distance; cpt++)
 		                 {
 							if(arme.distance!=1){
@@ -61,23 +63,54 @@ public class tire : MonoBehaviour {
 							}
 						}
 				}
-				else{
-					verif=false;
-				}
-               }
+               
                 else{
         
         
                     verif= false;
                 }
-        
-                break;
-            }
-            case "Repousser":{
-                 for(int cpt=0;cpt<arme.distance;cpt++)
-                 {
+			}else{
+				if(hero.mouvements.posX==cible.mouvements.posX){
+					if(hero.mouvements.posY>cible.mouvements.posY) {
+						int dep =hero.mouvements.posY;
+						compare =dep -cible.mouvements.posY;
+					}else{
+						int dep =cible.mouvements.posY;
+						compare =dep -hero.mouvements.posY;
+					}
+					if (compare <= arme.distance)
+					{
+						
+						for (int cpt = 1; cpt <= arme.distance; cpt++)
+						{
+							if(arme.distance!=1){
+								if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Empty)
+								{
+									verif=true;
+								}
+								else
+								{
+									verif=false;
+									break;
+								}
+							}
+						}
+					}
+					
+					else{
+						
+						
+						verif= false;
+					}
+				}
+			}
+			break;
+			}
+			case "Repousser":{
+				for(int cpt=0;cpt<arme.distance;cpt++)
+				{
 					if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
-                     {
+					{
                         verif=true;
                      }
                      else
@@ -158,7 +191,6 @@ public class tire : MonoBehaviour {
                 arme.nom="roche";
                 arme.degat=1;
                 arme.distance=1;
-                arme.distance=2;
                 arme.effet="Degat";
                 break;
             }
