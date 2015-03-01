@@ -18,10 +18,7 @@ public class tire : MonoBehaviour {
     Case[,] tableauCourant;
 	// Use this for initialization
 	void Start () {
-		arme.nom="roche";
-		arme.degat=1;
-		arme.distance=2;
-		arme.effet="Degat";
+
 
 	}
 	
@@ -207,39 +204,39 @@ public class tire : MonoBehaviour {
             case "roche":{
                 arme.nom="roche";
                 arme.degat=1;
-                arme.distance=2;
+                arme.distance=3;
                 arme.effet="Degat";
                 break;
             }
             case "bille":{
                 arme.nom="bille";
-                arme.degat=1;
-                arme.distance=2;
+                arme.degat=2;
+                arme.distance=3;
                 arme.effet="Degat";
                 break;
             }
             case "boite":{
                 arme.nom="boite";
-                arme.degat=1;
+                arme.degat=0;
                 arme.distance=2;
                 arme.effet="Repousser";
                 break;
             }
             case"femure":{
                 arme.nom="femure";
-                arme.degat=1;
-                arme.distance=2;
+                arme.degat=3;
+                arme.distance=1;
                 arme.effet="Degat";
                 break;
             }
             case"chat":{
                 arme.nom="chat";
-                arme.degat=1;
-                arme.distance=2;
+                arme.degat=0;
+                arme.distance=3;
                 arme.effet="Immobilise";
                 break;
             }
-            case"baguette":{
+            case"baguette":{//indeterminer
                 arme.nom="baguette";
                 arme.degat=1;
                 arme.distance=2;

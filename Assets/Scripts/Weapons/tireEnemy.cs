@@ -23,10 +23,7 @@ public class tireEnemy : MonoBehaviour {
 	Case[,] tableauCourant;
 	// Use this for initialization
 	void Start () {
-		arme.nom="squirrel";
-		arme.degat=1;
-		arme.distance=1;
-		arme.effet="Degat";
+
 		
 	}
 	
@@ -139,7 +136,7 @@ public class tireEnemy : MonoBehaviour {
 	private void  attack(HeroScript cible)
 	{
 		health=cible.GetComponent<HealthScript>();
-		health.hp -= arme.degat;  
+		health.Damage (arme.degat);  
 	}
 
 	public void setEnemy(string nom)
@@ -152,21 +149,35 @@ public class tireEnemy : MonoBehaviour {
 		 */
 		switch(nom)
 		{
-		case "squirrel":{
-				arme.nom="squirrel";
+			case "squirrel":{
+					arme.nom="squirrel";
+					arme.degat=1;
+					arme.distance=2;
+					arme.effet="Degat";
+					break;
+				}
+			case "snake":{
+				arme.nom="snake";
 				arme.degat=1;
-				arme.distance=1;
+				arme.distance=3;
 				arme.effet="Degat";
 				break;
 			}
-
+			case "bear":{
+				arme.nom="bear";
+				arme.degat=3;
+				arme.distance=2;
+				arme.effet="Degat";
+				break;
+			}
+				
 			default:{
-				arme.nom="squirrel";
-				arme.degat=1;
-				arme.distance=1;
-				arme.effet="Degat";
-				break;
-			}
+					arme.nom="squirrel";
+					arme.degat=1;
+					arme.distance=2;
+					arme.effet="Degat";
+					break;
+				}
 		}   
 	}
 	
