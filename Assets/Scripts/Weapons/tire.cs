@@ -3,7 +3,6 @@ using System.Collections;
 
 public class tire : MonoBehaviour {
 
-	public bool shootAnim=true;
     private bool verif=true;
 	public Transform projectil;
 	public HealthScript health;
@@ -40,15 +39,6 @@ public class tire : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		
-
-		if (shootAnim)
-		{
-			//GetComponent<Animator> ().SetTrigger ("shoot");
-			//shootAnim=false;
-			//shootAnim = false;
-		}
-
 	}
     public bool tirer(HeroScript hero, EnemyScript cible)
     {
@@ -195,10 +185,14 @@ public class tire : MonoBehaviour {
     }
 	private void attack(EnemyScript cible)
     {
+<<<<<<< HEAD
 
 	//	GameObject instance = Instantiate(Resources.Load("Project"),transform.position, transform.rotation) as GameObject;
 
 		shootAnim = true;
+=======
+		gameObject.GetComponent<Animator>().SetTrigger("shoot");
+>>>>>>> 9defbc34a813244a048a8b343c21855a24a9f3a5
         switch(arme.effet)
         {
             case "Degat":{

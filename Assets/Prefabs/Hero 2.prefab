@@ -551,7 +551,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
   health: {fileID: 11477020}
   showdamage: 0
 --- !u!114 &11477018
@@ -568,7 +567,7 @@ MonoBehaviour:
   canMove: 1
   mouvements: {fileID: 11477022}
   turn: {fileID: 0}
-  shooter: {fileID: 0}
+  shooter: {fileID: 11421400}
 --- !u!114 &11477020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -580,7 +579,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7441239d83fd66438905524a1a20751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 1
+  hp: 3
   healthBarSlider: {fileID: 0}
 --- !u!114 &11477022
 MonoBehaviour:

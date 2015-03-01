@@ -15,6 +15,7 @@ public class CameraScript : MonoBehaviour {
 
 	void LateUpdate()
 	{
-		this.transform.position = new Vector3 (GameObject.FindObjectOfType<HeroScript> ().transform.position.x, 0.544f,-10f);
+        if (GameObject.FindObjectOfType<HeroScript>() != null)
+		    this.transform.position = new Vector3 (GameObject.FindObjectOfType<HeroScript> ().transform.position.x, 0.544f,-10f);
 	}
 }

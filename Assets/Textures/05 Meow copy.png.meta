@@ -1,0 +1,113 @@
+fileFormatVersion: 2
+guid: 2a22240c7194a4043803cbaae8091270
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: 05 Meow copy_0
+    21300002: bras_droit
+    21300004: 05 Meow copy_1
+    21300006: corp
+    21300008: patte_gauche
+    21300010: patte_droite
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: 05 Meow copy_0
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 512
+        width: 110
+        height: 254
+      alignment: 9
+      pivot: {x: .475462824, y: .131624952}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: bras_droit
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 561
+        width: 215
+        height: 174
+      alignment: 9
+      pivot: {x: .161048859, y: .143228471}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: 05 Meow copy_1
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 571
+        width: 236
+        height: 189
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: corp
+      rect:
+        serializedVersion: 2
+        x: 469
+        y: 233
+        width: 223
+        height: 282
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: patte_gauche
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 222
+        width: 158
+        height: 134
+      alignment: 9
+      pivot: {x: .847346604, y: .80884701}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: patte_droite
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 58
+        width: 112
+        height: 175
+      alignment: 9
+      pivot: {x: .781151652, y: .870156169}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
