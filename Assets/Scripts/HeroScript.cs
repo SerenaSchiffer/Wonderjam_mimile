@@ -40,10 +40,10 @@ public class HeroScript : MonoBehaviour {
 
 	}
 
-    void OnDestroy()
+    /*void OnDestroy()
     {
         GameObject.FindObjectOfType<GameOverScript>().isDead = true;
-    }
+    }*/
 
 
 	// Update is called once per frame

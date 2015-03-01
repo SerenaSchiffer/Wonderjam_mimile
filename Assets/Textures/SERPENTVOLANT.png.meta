@@ -54,18 +54,18 @@ TextureImporter:
         y: 473
         width: 248
         height: 306
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .0646685287, y: .114840642}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: aile_droite
       rect:
         serializedVersion: 2
-        x: 401
+        x: 402
         y: 489
         width: 345
         height: 262
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .059284687, y: .136005193}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: serpent
       rect:
@@ -74,8 +74,8 @@ TextureImporter:
         y: 29
         width: 453
         height: 397
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .428501815, y: .703958869}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: projectile
       rect:
@@ -84,8 +84,8 @@ TextureImporter:
         y: 266
         width: 74
         height: 54
-      alignment: 0
-      pivot: {x: .5, y: .5}
+      alignment: 9
+      pivot: {x: .7674734, y: .566643059}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
