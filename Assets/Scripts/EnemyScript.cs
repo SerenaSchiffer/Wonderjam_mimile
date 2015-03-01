@@ -51,6 +51,7 @@ public class EnemyScript : MonoBehaviour {
             {
                 if (hero.mouvements.posY == mouvements.posY || hero.mouvements.posX == mouvements.posX)
                 {
+                    //TODO: vérifier si le héro est dans le range de l'ennemi.
                     tireEnemy actionEnnemi = this.GetComponent<tireEnemy>();
                     Debug.Log("Ennemi attaque");
                     actionEnnemi.tirer(this, hero);
@@ -136,13 +137,12 @@ public class EnemyScript : MonoBehaviour {
     {
         bool isObstacle;
 
-        isObstacle = (mouvements.Script.tableauCases[x, y + 1].GetCase() == EtatCase.Obstacle || mouvements.Script.tableauCases[x, y + 1].GetCase() == EtatCase.HalfObstacle);
+        isObstacle = (mouvements.Script.tableauCases[x, y].GetCase() == EtatCase.Obstacle || mouvements.Script.tableauCases[x, y].GetCase() == EtatCase.HalfObstacle);
         return isObstacle;
     }
 
 	public void OnMouseUp()
 	{
-		HeroScript hero = GameObject.FindObjectOfType<HeroScript> ();
 		hero.shooter.changerArme ("roche");
 		Debug.Log (hero.shooter.tirer (hero, this));
 
