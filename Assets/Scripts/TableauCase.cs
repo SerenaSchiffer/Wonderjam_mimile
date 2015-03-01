@@ -66,6 +66,7 @@ public class TableauCase : MonoBehaviour {
 			tableauCases[8,2].SetEtat(EtatCase.Obstacle);
 			tableauCases[9,1].SetEtat(EtatCase.Obstacle);
 			tableauCases[10,1].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[13,1].SetEtat(EtatCase.Obstacle);
 			break;
 			}
 		}
