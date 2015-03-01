@@ -106,8 +106,10 @@ public class tire : MonoBehaviour {
 						for (int cpt = 1; cpt <= compare; cpt++)
 						{
 							if(arme.distance!=1){
+                                Debug.Log("distance != 1");
 								if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Enemy||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Trap)
 								{
+                                    Debug.Log("dans if long");
 									verif=true;
 								}
 								else
@@ -184,19 +186,24 @@ public class tire : MonoBehaviour {
         return verif;
 
     }
-	//public Rigidbody project;
+	/*public GameObject project;
 
 	
-	/*public void spawnProjectile(HeroScript hero)
+	public void spawnProjectile(HeroScript hero)
 	{
-
-		Instantiate (project);
+		GameObject instanc=
+		Instantiate (project)as GameObject;
+		int position_x, position_y;
+		position_x = hero.mouvements.posX;
+		position_y = hero.mouvements.posY;
+		Vector3 posi = new Vector3 (position_x, position_y, 20);
+		instanc.transform.position = posi;
+		//instanc.transform.position.y = position_y;
+		//instanc.
 	}*/
 	private void attack(EnemyScript cible)
 	{
-
-
-
+        GetComponent<Animator>().SetTrigger("shoot");
 
         switch(arme.effet)
         {
@@ -247,7 +254,7 @@ public class tire : MonoBehaviour {
             }
             case "boite":{
                 arme.nom="boite";
-                arme.degat=0;
+                arme.degat=5;
                 arme.distance=2;
 			arme.effet="Degat";
                 break;
@@ -262,15 +269,15 @@ public class tire : MonoBehaviour {
             }
             case"chat":{
                 arme.nom="chat";
-                arme.degat=0;
+                arme.degat=5;
                 arme.distance=3;
 			arme.effet="Degat";
                 break;
             }
             case"baguette":{//indeterminer
                 arme.nom="baguette";
-                arme.degat=1;
-                arme.distance=2;
+                arme.degat=15;
+                arme.distance=4;
                 arme.effet="Degat";
                 break;
             }
