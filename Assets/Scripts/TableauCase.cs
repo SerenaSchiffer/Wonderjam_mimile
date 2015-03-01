@@ -79,6 +79,38 @@ public class TableauCase : MonoBehaviour {
 			tableauCases[27,2].SetEtat(EtatCase.Obstacle);
 			break;
 			}
+		case 2 :
+		{
+			Debug.Log ("Entrée sur le niveau 2");
+			tableauCases[3,0].SetEtat(EtatCase.Obstacle);
+			tableauCases[3,2].SetEtat(EtatCase.Obstacle);
+			tableauCases[4,0].SetEtat(EtatCase.Obstacle);
+			tableauCases[5,0].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[5,1].SetEtat(EtatCase.Obstacle);
+			tableauCases[7,1].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[7,2].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[10,0].SetEtat(EtatCase.Obstacle);
+			tableauCases[10,2].SetEtat(EtatCase.Obstacle);
+			tableauCases[12,0].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[14,2].SetEtat(EtatCase.Obstacle);
+			tableauCases[15,1].SetEtat(EtatCase.Obstacle);
+			tableauCases[15,2].SetEtat(EtatCase.Obstacle);
+			tableauCases[16,1].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[18,0].SetEtat(EtatCase.Obstacle);
+			tableauCases[18,1].SetEtat(EtatCase.Obstacle);
+			tableauCases[20,1].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[20,1].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[22,1].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[23,1].SetEtat(EtatCase.Obstacle);
+			tableauCases[25,0].SetEtat(EtatCase.Obstacle);
+			tableauCases[25,1].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[28,0].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[28,2].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[30,0].SetEtat(EtatCase.Obstacle);
+			tableauCases[30,1].SetEtat(EtatCase.Obstacle);
+			tableauCases[30,2].SetEtat(EtatCase.Obstacle);
+			break;
+		}
 		}
 	}
 }
