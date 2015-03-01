@@ -1064,6 +1064,7 @@ MonoBehaviour:
   posY: 1
   Script: {fileID: 1963052606}
   button: {fileID: 42491189}
+  atexture: {fileID: 2800000, guid: 81360c105ae826840bddd5614909d450, type: 3}
 --- !u!212 &345277155
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1109,6 +1110,33 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_Radius: .574999988
   m_Center: {x: 0, y: 0}
+--- !u!1 &380251822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 380251823}
+  m_Layer: 0
+  m_Name: Pop_up
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &380251823
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 380251822}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.19777691, y: 1.16976786, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
 --- !u!1 &446326617
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,7 +1260,7 @@ MonoBehaviour:
     m_HighlightedTrigger: Highlighted
     m_PressedTrigger: Pressed
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 1919431918}
   m_HandleRect: {fileID: 0}

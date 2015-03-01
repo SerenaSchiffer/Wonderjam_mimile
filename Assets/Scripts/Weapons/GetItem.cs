@@ -21,9 +21,10 @@ public class GetItem : MonoBehaviour {
 	private HeroScript hero;
 	private bool itemTaken;
 	public TableauCase Script;
-
+	public bool isset;
 	public Transform button;
 	public Texture2D atexture;
+	public bool popup = true;
 
 
 	public void GiveWeaponToPlayer(WeaponType weaponType)
@@ -34,11 +35,11 @@ public class GetItem : MonoBehaviour {
 				{
 					//Permettre l'utilisation dans l'interface
 					Debug.Log ("Tu as pris une roche !");
-					Destroy (gameObject);
 					Script.tableauCases[posX,posY].SetEtat(EtatCase.Empty);
 					button.GetComponent<CanvasGroup>().interactable = true;
-					OnGUI();
-					
+					isset = true;
+					Invoke("desactiverPopUp", 5);
+					Destroy(gameObject.renderer);
 					break;
 				}
 			case(WeaponType.Bone):
@@ -66,7 +67,10 @@ public class GetItem : MonoBehaviour {
 
 	}
 
-
+	void desactiverPopUp()
+	{
+		popup = false;
+	}
 
 
 	// Use this for initialization
@@ -106,12 +110,12 @@ public class GetItem : MonoBehaviour {
 	}
 
 
-	void OnGUI() {
-		if (!atexture) {
-			Debug.LogError("Assign a Texture in the inspector.");
-			return;
+	void OnGUI() 
+	
+	{	
+		if (isset && popup) {
+			GUI.DrawTexture (new Rect (230, -15, 900, 600), atexture, ScaleMode.StretchToFill, true, 10.0F);
 		}
-		GUI.DrawTexture(new Rect(10, 10, 60, 60), atexture, ScaleMode.ScaleToFit, true, 10.0F);
 	}
 
 }
