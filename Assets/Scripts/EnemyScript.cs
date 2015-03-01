@@ -15,7 +15,6 @@ public class EnemyScript : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         spawned = false;
-        DansLaChampDeLaCamera();
 	}
 	
 	// Update is called once per frame
@@ -37,6 +36,38 @@ public class EnemyScript : MonoBehaviour {
                     if (!isThereObstacle('g') && mouvements.posX < 49)
                     {
                         resultat = mouvements.Move('g', mouvements.posX, mouvements.posY);
+                    }
+                    else
+                    {
+                        if (mouvements.posY == 2)
+                        {
+                            Debug.Log("2");
+                            if (!isThereObstacle('b') && mouvements.posY > 0)
+                            {
+                                resultat = mouvements.Move('b', mouvements.posX, mouvements.posY);
+                            }
+                        }
+                        else if (mouvements.posY == 0)
+                        {
+                            Debug.Log("0");
+                            if (!isThereObstacle('h') && mouvements.posY < 2)
+                            {
+                                resultat = mouvements.Move('h', mouvements.posX, mouvements.posY);
+                            }
+                        }
+                        else
+                        {
+                            Debug.Log("1");
+                            if (!isThereObstacle('h') && mouvements.posY < 2)
+                            {
+                                resultat = mouvements.Move('h', mouvements.posX, mouvements.posY);
+                            }
+                            else if (!isThereObstacle('b') && mouvements.posY > 0)
+                            {
+                                resultat = mouvements.Move('b', mouvements.posX, mouvements.posY);
+                            }
+                        }
+
                     }
                 }
                 else
@@ -60,14 +91,14 @@ public class EnemyScript : MonoBehaviour {
                 {
                     if (enemiEnHaut)
                     {
-                        if (!isThereObstacle('b') && mouvements.posY < 2)
+                        if (!isThereObstacle('b') && mouvements.posY > 0)
                         {   
                             resultat = mouvements.Move('b', mouvements.posX, mouvements.posY);
                         }
                     }
                     else
                     {
-                        if (!isThereObstacle('h') && mouvements.posY > 0)
+                        if (!isThereObstacle('h') && mouvements.posY < 2)
                         {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
                             resultat = mouvements.Move('h', mouvements.posX, mouvements.posY);
                         }
@@ -144,8 +175,17 @@ public class EnemyScript : MonoBehaviour {
 	public void OnMouseUp()
 	{
 		hero.shooter.changerArme ("roche");
-		Debug.Log (hero.shooter.tirer (hero, this));
+		if(hero.shooter.tirer (hero, this));
+		{
+			hero.turn.tour (false);
+		}
 
+	}
+
+
+	void OnDestroy()
+	{
+		mouvements.Script.tableauCases [mouvements.posX, mouvements.posY].SetEtat (EtatCase.Empty);
 	}
 
 }

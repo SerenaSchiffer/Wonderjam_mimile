@@ -49,13 +49,16 @@ public class tireEnemy : MonoBehaviour {
 					int dep =cible.mouvements.posX;
 					compare =dep -hero.mouvements.posX;
 				}
-				if (compare <= arme.distance)
-				{
+				//compare=2;
+				if(compare==1){
 					
-					for (int cpt = 1; cpt <= arme.distance; cpt++)
+				}else{
+					if (compare <= arme.distance)
 					{
-						if(arme.distance!=1){
-							if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
+						for (int cpt = 1; cpt <= compare; cpt++)
+						{
+							
+							if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Trap)
 							{
 								verif=true;
 							}
@@ -64,14 +67,15 @@ public class tireEnemy : MonoBehaviour {
 								verif=false;
 								break;
 							}
+							
 						}
 					}
-				}
-				
-				else{
 					
-					
-					verif= false;
+					else{
+						
+						
+						verif= false;
+					}
 				}
 			}else{
 				if(hero.mouvements.posX==cible.mouvements.posX){
@@ -88,7 +92,7 @@ public class tireEnemy : MonoBehaviour {
 						for (int cpt = 1; cpt <= arme.distance; cpt++)
 						{
 							if(arme.distance!=1){
-								if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Empty)
+								if (tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX , hero.mouvements.posY + cpt].GetCase() == EtatCase.Trap)
 								{
 									verif=true;
 								}
@@ -106,6 +110,11 @@ public class tireEnemy : MonoBehaviour {
 						
 						verif= false;
 					}
+				}
+				else{
+					
+					
+					verif= false;
 				}
 			}
 			break;
