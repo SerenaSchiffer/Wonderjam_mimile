@@ -1547,7 +1547,7 @@ CanvasGroup:
   m_GameObject: {fileID: 432908284}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 0
+  m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!114 &432908289
@@ -2180,6 +2180,14 @@ Prefab:
     - target: {fileID: 22498618, guid: 4c12050548fc82b488596a6a7591129d, type: 2}
       propertyPath: m_Pivot.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22598644, guid: 4c12050548fc82b488596a6a7591129d, type: 2}
+      propertyPath: m_Interactable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 22598638, guid: 4c12050548fc82b488596a6a7591129d, type: 2}
+      propertyPath: m_Interactable
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4c12050548fc82b488596a6a7591129d, type: 2}
@@ -3926,7 +3934,7 @@ CanvasGroup:
   m_GameObject: {fileID: 1024270475}
   m_Enabled: 1
   m_Alpha: 0
-  m_Interactable: 0
+  m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!114 &1024270480

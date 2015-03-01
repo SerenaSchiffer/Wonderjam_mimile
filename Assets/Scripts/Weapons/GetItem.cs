@@ -80,8 +80,20 @@ public class GetItem : MonoBehaviour {
 				isset = true;
 				Invoke ("desactiverPopUp", 5);
 				Destroy (gameObject.renderer);
+				Script.tableauCases[posX,posY].SetEtat(EtatCase.Empty);
 				break;
 				}
+
+			case(WeaponType.Wand1):
+			{
+				Debug.Log ("Tu as pris le baton !");
+				button.GetComponent<CanvasGroup>().interactable = true;
+				isset = true;
+				Invoke ("desactiverPopUp", 5);
+				Destroy (gameObject.renderer);
+				Script.tableauCases[posX,posY].SetEtat(EtatCase.Empty);
+				break;
+			}
 
 			case(WeaponType.bille):
 			{

@@ -1539,7 +1539,7 @@ Prefab:
       objectReference: {fileID: 1963052605}
     - target: {fileID: 11477020, guid: 3ee0f724946060043af724a1ab727a0b, type: 2}
       propertyPath: hp
-      value: 15
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 477044, guid: 3ee0f724946060043af724a1ab727a0b, type: 2}
       propertyPath: m_LocalScale.x
@@ -2265,7 +2265,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectil: {fileID: 0}
   health: {fileID: 0}
+  direction: 0
   showdamage: 0
 --- !u!114 &432908287
 MonoBehaviour:
@@ -3047,6 +3049,10 @@ Prefab:
       propertyPath: posY
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 11442626, guid: afb328f0aaa6ff24d9d4d2fcaf3b62d4, type: 2}
+      propertyPath: posX
+      value: 9
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afb328f0aaa6ff24d9d4d2fcaf3b62d4, type: 2}
   m_RootGameObject: {fileID: 1561907224}
@@ -3816,6 +3822,10 @@ Prefab:
       propertyPath: posY
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11431480, guid: 5f057bd302b6dc54ab8c70088ce189f0, type: 2}
+      propertyPath: Script
+      value: 
+      objectReference: {fileID: 1963052606}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 5f057bd302b6dc54ab8c70088ce189f0, type: 2}
   m_RootGameObject: {fileID: 2069060789}
@@ -4089,7 +4099,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectil: {fileID: 0}
   health: {fileID: 0}
+  direction: 0
   showdamage: 0
 --- !u!225 &785986490
 CanvasGroup:
@@ -4760,7 +4772,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectil: {fileID: 0}
   health: {fileID: 0}
+  direction: 0
   showdamage: 0
 --- !u!225 &863297002
 CanvasGroup:
@@ -5701,7 +5715,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectil: {fileID: 0}
   health: {fileID: 0}
+  direction: 0
   showdamage: 0
 --- !u!225 &1024270479
 CanvasGroup:
@@ -7917,7 +7933,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isHero: 0
-  posX: 6
+  posX: 9
   posY: 2
   Script: {fileID: 1963052606}
   speed: 1
@@ -8280,7 +8296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7441239d83fd66438905524a1a20751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 15
+  hp: 100
   healthBarSlider: {fileID: 250727310}
 --- !u!114 &1660452884
 MonoBehaviour:
@@ -8311,7 +8327,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectil: {fileID: 0}
   health: {fileID: 1660452883}
+  direction: 0
   showdamage: 0
 --- !u!1 &1689626447
 GameObject:
@@ -9179,6 +9197,7 @@ GameObject:
   - 114: {fileID: 1963052607}
   - 114: {fileID: 1963052606}
   - 114: {fileID: 1963052605}
+  - 114: {fileID: 1963052609}
   m_Layer: 0
   m_Name: Scripts
   m_TagString: Untagged
@@ -9232,6 +9251,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+--- !u!114 &1963052609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1963052604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8a125eded44b949aa1a0a804a38e6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDead: 0
 --- !u!1 &1985423419
 GameObject:
   m_ObjectHideFlags: 0
@@ -9440,7 +9471,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  projectil: {fileID: 0}
   health: {fileID: 0}
+  direction: 0
   showdamage: 0
 --- !u!225 &2054644092
 CanvasGroup:
@@ -9849,7 +9882,7 @@ MonoBehaviour:
   isHero: 0
   posX: 16
   posY: 1
-  Script: {fileID: 0}
+  Script: {fileID: 1963052606}
   speed: 1
 --- !u!114 &2069060797
 MonoBehaviour:
