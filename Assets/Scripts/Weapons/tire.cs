@@ -182,6 +182,7 @@ public class tire : MonoBehaviour {
 
 				Debug.Log (arme.degat);
 				health=cible.GetComponent<HealthScript>();
+			Debug.Log(arme.degat);
 				health.Damage (arme.degat);
 
                
@@ -226,7 +227,7 @@ public class tire : MonoBehaviour {
                 arme.nom="boite";
                 arme.degat=0;
                 arme.distance=2;
-                arme.effet="Repousser";
+			arme.effet="Degat";
                 break;
             }
             case"femure":{
@@ -241,7 +242,7 @@ public class tire : MonoBehaviour {
                 arme.nom="chat";
                 arme.degat=0;
                 arme.distance=3;
-                arme.effet="Immobilise";
+			arme.effet="Degat";
                 break;
             }
             case"baguette":{//indeterminer

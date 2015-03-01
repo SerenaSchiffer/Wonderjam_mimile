@@ -11,7 +11,7 @@ public class EnemyScript : MonoBehaviour {
     private GameObject enemy;
 	private bool spawned;
     private bool resultat;
-
+	public string arme;
 	// Use this for initialization
 	void Start () {
         spawned = false;
@@ -194,7 +194,7 @@ public class EnemyScript : MonoBehaviour {
 
 	public void OnMouseUp()
 	{
-		hero.shooter.changerArme ("roche");
+		hero.shooter.changerArme (arme);
         if (hero.shooter.tirer(hero, this))
             hero.turn.tour(false);
 
