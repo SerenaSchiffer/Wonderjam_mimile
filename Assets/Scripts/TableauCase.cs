@@ -68,6 +68,7 @@ public class TableauCase : MonoBehaviour {
 			tableauCases[10,1].SetEtat(EtatCase.HalfObstacle);
 			tableauCases[13,1].SetEtat(EtatCase.Obstacle);
 			tableauCases[16,0].SetEtat(EtatCase.HalfObstacle);
+			tableauCases[16,2].SetEtat(EtatCase.Obstacle);
 			tableauCases[19,1].SetEtat(EtatCase.HalfObstacle);
 			tableauCases[20,1].SetEtat(EtatCase.HalfObstacle);
 			tableauCases[21,1].SetEtat(EtatCase.HalfObstacle);

@@ -44,6 +44,10 @@ public class GetItem : MonoBehaviour {
 			case(WeaponType.Bone):
 				{
 					//Permettre l'utilisation dans l'interface
+					Debug.Log ("Tu as pris un fémur !");
+					Destroy(gameObject);
+					button.GetComponent<CanvasGroup>().interactable = true;
+					OnGUI();
 					break;
 				}
 			case(WeaponType.Jack):
