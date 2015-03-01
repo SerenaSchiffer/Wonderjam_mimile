@@ -3,8 +3,8 @@ using System.Collections;
 
 public class menu_Script : MonoBehaviour {
 
-	public bool isset;
-	public Texture2D atexture;
+	public bool isset,isset_2;
+	public Texture2D atexture,another;
 
 	// Use this for initialization
 	void Start () {
@@ -35,20 +35,33 @@ public class menu_Script : MonoBehaviour {
 		{
 			// On Click, load the first level.
 			// "Stage1" is the name of the first scene we created.
-			Invoke("load",5);
+
 			isset =true;
+			Invoke("afficher",4);
+			Invoke("load",10);
 
 		}
 
 
 		if (isset) {
 			GUI.DrawTexture (new Rect ((Screen.width/2)-(450), (Screen.height/2)-(500), 931, 1024), atexture, ScaleMode.StretchToFill, true, 10.0F);
+
 		}
+
+		if(isset_2)
+			GUI.DrawTexture (new Rect ((Screen.width/2)-(512), (Screen.height/2)-(512), 1024, 1024), another, ScaleMode.StretchToFill, true, 10.0F);
 	}
 
 	public void load()
 	{
 		Application.LoadLevel ("test_Steven");
 	}
+
+	public void afficher()
+	{
+		isset_2 = true;
+	}
+
+
 
 }

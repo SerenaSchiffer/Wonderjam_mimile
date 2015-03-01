@@ -223,5 +223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isset: 0
   isset_2: 0
+  isset_3: 0
   atexture: {fileID: 2800000, guid: e17dabeda7a094c47a7a12efbf287e23, type: 3}
   another: {fileID: 2800000, guid: 5ff6400474449b341bccec7ba70d7bfd, type: 3}
+  another_1: {fileID: 2800000, guid: 356aef2411de4bc428d15b9b318d585d, type: 3}
