@@ -5,19 +5,20 @@ public class tire : MonoBehaviour {
 
 	public bool shootAnim=true;
     private bool verif=true;
-    
+	public Transform projectil;
 	public HealthScript health;
           
+	private Vector3 target;
+
     public struct armeJoueur{
         public string nom;
         public int degat;
         public int distance;
         public string effet;
     }
-
+	public int direction;
 	public int showdamage;
-
-    armeJoueur arme=new armeJoueur();
+	armeJoueur arme=new armeJoueur();
     Case[,] tableauCourant;
 	// Use this for initialization
 	void Start () {
@@ -27,7 +28,16 @@ public class tire : MonoBehaviour {
 		arme.effet="Degat";
 		
 	}
-	
+
+
+	void FixedUpdate()  {
+		/*float step = 2 * Time.deltaTime;
+		projectil.transform.position = Vector3.MoveTowards (projectil.transform.position, target, step);
+		if (projectil.transform.position == target)
+			Destroy (projectil);*/
+	}
+
+
 	// Update is called once per frame
 	void Update () {
 		
@@ -50,9 +60,11 @@ public class tire : MonoBehaviour {
             case "Degat":{
 			if(hero.mouvements.posY==cible.mouvements.posY){
 				if(hero.mouvements.posX>cible.mouvements.posX) {
+					direction=-1;
 					int dep =hero.mouvements.posX;
 					compare =dep -cible.mouvements.posX;
 				}else{
+					direction=1;
 					int dep =cible.mouvements.posX;
 					compare =dep -hero.mouvements.posX;
 				}
@@ -183,6 +195,9 @@ public class tire : MonoBehaviour {
     }
 	private void attack(EnemyScript cible)
     {
+
+	//	GameObject instance = Instantiate(Resources.Load("Project"),transform.position, transform.rotation) as GameObject;
+
 		shootAnim = true;
         switch(arme.effet)
         {
