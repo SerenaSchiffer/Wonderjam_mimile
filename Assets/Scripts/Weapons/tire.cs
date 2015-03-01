@@ -20,8 +20,11 @@ public class tire : MonoBehaviour {
     Case[,] tableauCourant;
 	// Use this for initialization
 	void Start () {
-
-
+		arme.nom="roche";
+		arme.degat=1;
+		arme.distance=3;
+		arme.effet="Degat";
+		
 	}
 	
 	// Update is called once per frame
