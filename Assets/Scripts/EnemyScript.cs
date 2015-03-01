@@ -19,7 +19,6 @@ public class EnemyScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        
 	}
 
 	public void Move()
@@ -175,10 +174,7 @@ public class EnemyScript : MonoBehaviour {
 	public void OnMouseUp()
 	{
 		hero.shooter.changerArme ("roche");
-		if(hero.shooter.tirer (hero, this));
-		{
-			hero.turn.tour (false);
-		}
+		Debug.Log (hero.shooter.tirer (hero, this));
 
 	}
 
