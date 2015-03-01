@@ -47,9 +47,10 @@ public class GetItem : MonoBehaviour {
 				{
 					//Permettre l'utilisation dans l'interface
 					Debug.Log ("Tu as pris un fémur !");
-					Destroy(gameObject);
 					button.GetComponent<CanvasGroup>().interactable = true;
-					OnGUI();
+					isset = true;
+					Invoke ("desactiverPopUp", 5);
+					Destroy (gameObject.renderer);
 					break;
 				}
 			case(WeaponType.Jack):

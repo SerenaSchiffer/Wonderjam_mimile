@@ -6,7 +6,7 @@ public class HealthScript : MonoBehaviour {
 
 	public int hp = 1;
 	public Slider healthBarSlider;
-
+	private bool isDead;
 
 	public void Damage(int damage)
 	{
@@ -17,7 +17,8 @@ public class HealthScript : MonoBehaviour {
 
 		if (hp <= 0) 
 		{
-			Destroy(gameObject);
+			gameObject.GetComponent<Animator>().SetTrigger ("Die");
 		}
 	}
+
 }
