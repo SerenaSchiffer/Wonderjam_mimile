@@ -9,3 +9,11 @@ EditorBuildSettings:
     path: Assets/Scenes/menu.unity
   - enabled: 1
     path: Assets/Scenes/test_steven.unity
+  - enabled: 1
+    path: Assets/Scenes/stage1.unity
+  - enabled: 1
+    path: Assets/Scenes/stage2.unity
+  - enabled: 1
+    path: Assets/Scenes/stage3.unity
+  - enabled: 1
+    path: Assets/Scenes/fin.unity

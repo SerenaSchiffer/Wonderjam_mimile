@@ -220,12 +220,20 @@ public class tireEnemy : MonoBehaviour {
 				arme.effet="Degat";
 				break;
 			}
-			case "bear":{
-				arme.nom="bear";
-				arme.degat=3;
-				arme.distance=2;
+			case "ours":{
+				arme.nom="ours";
+				arme.degat=6;
+				arme.distance=1;
 				arme.effet="Degat";
 				break;
+			}
+
+			case "wolf":{
+			arme.nom="loup";
+			arme.degat=4;
+			arme.distance=1;
+			arme.effet="Degat";
+			break;
 			}
 				
 			default:{

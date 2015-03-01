@@ -247,7 +247,7 @@ public class tire : MonoBehaviour {
             }
             case "boite":{
                 arme.nom="boite";
-                arme.degat=0;
+                arme.degat=5;
                 arme.distance=2;
 			arme.effet="Degat";
                 break;

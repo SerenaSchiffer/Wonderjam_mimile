@@ -107,8 +107,11 @@ public class HeroScript : MonoBehaviour {
                         break;
 
                     case "stage3":
-                        //TODO: faire un processus de victoire.
+						{
+                        if(mouvements.posX == 29)
+							Application.LoadLevel("fin");
                         break;
+						}
                 }
             }
 		}        
