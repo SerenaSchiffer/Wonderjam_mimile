@@ -69,13 +69,11 @@ public class EnemyScript : MonoBehaviour {
                     {
                         if (!isThereObstacle('b') && mouvements.posY > 0)
                         {
-                            Debug.Log("NOOOON");
                             resultat = mouvements.Move('b', mouvements.posX, mouvements.posY);
                             mouvements.Script.tableauCases[mouvements.posX, mouvements.posY].SetEtat(EtatCase.Enemy);
                         }
                         else
                         {
-                            Debug.Log("OUIIII");
                             if (enemiADroite)
                             {
                                 if (!isThereObstacle('g') && mouvements.posY < 49)
