@@ -40,6 +40,7 @@ public class GetItem : MonoBehaviour {
 					isset = true;
 					Invoke("desactiverPopUp", 5);
 					Destroy(gameObject.renderer);
+
 					break;
 				}
 			case(WeaponType.Bone):
@@ -118,7 +119,7 @@ public class GetItem : MonoBehaviour {
 	
 	{	
 		if (isset && popup) {
-			GUI.DrawTexture (new Rect (230, -15, 900, 600), atexture, ScaleMode.StretchToFill, true, 10.0F);
+			GUI.DrawTexture (new Rect ((Screen.width/2)-(450), (Screen.height/2)-(300), 900, 600), atexture, ScaleMode.StretchToFill, true, 10.0F);
 		}
 	}
 
