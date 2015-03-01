@@ -1,7 +1,11 @@
 fileFormatVersion: 2
 guid: eea103ead78013b4dbe0a601c7261531
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: aile_gauche
+    21300002: aile_droite
+    21300004: serpent
+    21300006: projectile
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -25,13 +29,13 @@ TextureImporter:
   maxTextureSize: 1024
   textureSettings:
     filterMode: -1
-    aniso: -1
+    aniso: 16
     mipBias: -1
-    wrapMode: -1
+    wrapMode: 1
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -42,6 +46,46 @@ TextureImporter:
   textureType: 8
   buildTargetSettings: []
   spriteSheet:
-    sprites: []
+    sprites:
+    - name: aile_gauche
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 473
+        width: 248
+        height: 306
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: aile_droite
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 489
+        width: 345
+        height: 262
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: serpent
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 29
+        width: 453
+        height: 397
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: projectile
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 266
+        width: 74
+        height: 54
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
