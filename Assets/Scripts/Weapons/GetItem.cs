@@ -70,12 +70,17 @@ public class GetItem : MonoBehaviour {
 					button.GetComponent<CanvasGroup>().interactable = true;
 					isset=true;
 					Invoke("desactiverPopUp", 5);
+					Destroy (gameObject.renderer);
 					break;
 				}
 			case(WeaponType.Cat):
 				{
-					//Permettre l'utilisation dans l'interface
-					break;
+				Debug.Log ("Tu as pris une bille !");
+				button.GetComponent<CanvasGroup>().interactable = true;
+				isset = true;
+				Invoke ("desactiverPopUp", 5);
+				Destroy (gameObject.renderer);
+				break;
 				}
 
 			case(WeaponType.bille):

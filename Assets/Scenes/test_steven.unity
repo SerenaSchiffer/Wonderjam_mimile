@@ -1516,7 +1516,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
   health: {fileID: 0}
   showdamage: 0
 --- !u!225 &273464658
@@ -1873,7 +1872,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 477044, guid: 3ee0f724946060043af724a1ab727a0b, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 11477022, guid: 3ee0f724946060043af724a1ab727a0b, type: 2}
       propertyPath: Script
@@ -2177,7 +2176,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
   health: {fileID: 0}
   showdamage: 0
 --- !u!225 &389914768
@@ -3889,7 +3887,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 0
   health: {fileID: 0}
   showdamage: 0
 --- !u!225 &872468798
@@ -5111,7 +5108,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
   health: {fileID: 0}
   showdamage: 0
 --- !u!114 &1113904266
@@ -6341,7 +6337,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 0
   health: {fileID: 0}
   showdamage: 0
 --- !u!114 &1353696242
@@ -7664,7 +7659,7 @@ MonoBehaviour:
   canMove: 1
   mouvements: {fileID: 1660452882}
   turn: {fileID: 1963052605}
-  shooter: {fileID: 11494836, guid: 3ee0f724946060043af724a1ab727a0b, type: 2}
+  shooter: {fileID: 0}
   bille: 0
 --- !u!114 &1660452886
 MonoBehaviour:
@@ -7678,7 +7673,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 0
   health: {fileID: 1660452883}
   showdamage: 0
 --- !u!1 &1674518647
@@ -8227,7 +8221,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b00944a538ec14696e847bf998b7c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootAnim: 1
   health: {fileID: 0}
   showdamage: 0
 --- !u!225 &1748558574
