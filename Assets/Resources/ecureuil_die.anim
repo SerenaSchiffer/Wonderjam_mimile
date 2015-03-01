@@ -10509,7 +10509,7 @@ AnimationClip:
     script: {fileID: 0}
   m_Events:
   - time: 1.13333333
-    functionName: OnDestroy
+    functionName: DestroyThisObject
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

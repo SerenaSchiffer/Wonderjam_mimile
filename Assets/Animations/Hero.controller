@@ -212,6 +212,21 @@ State:
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
+--- !u!1102 &110279396
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: hero_die
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: c5417c070bd0aae48a6adb38773d14d9, type: 2}
+  m_ParentStateMachine: {fileID: 110721678}
+  m_Position: {x: 71, y: 245, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
 --- !u!1107 &110709980
 StateMachine:
   serializedVersion: 2
@@ -269,6 +284,7 @@ StateMachine:
   - {fileID: 110221678}
   - {fileID: 110255492}
   - {fileID: 110226176}
+  - {fileID: 110279396}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
   m_OrderedTransitions:

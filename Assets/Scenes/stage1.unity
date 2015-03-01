@@ -1079,6 +1079,10 @@ Prefab:
       propertyPath: speed
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 9595792, guid: afb328f0aaa6ff24d9d4d2fcaf3b62d4, type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afb328f0aaa6ff24d9d4d2fcaf3b62d4, type: 2}
   m_RootGameObject: {fileID: 1038897459}
@@ -1781,7 +1785,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 477044, guid: 3ee0f724946060043af724a1ab727a0b, type: 2}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 11477022, guid: 3ee0f724946060043af724a1ab727a0b, type: 2}
       propertyPath: Script
@@ -1795,6 +1799,10 @@ Prefab:
       propertyPath: turn
       value: 
       objectReference: {fileID: 1963052605}
+    - target: {fileID: 11477020, guid: 3ee0f724946060043af724a1ab727a0b, type: 2}
+      propertyPath: hp
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11494836, guid: 3ee0f724946060043af724a1ab727a0b, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3ee0f724946060043af724a1ab727a0b, type: 2}
@@ -4626,7 +4634,7 @@ Animator:
     type: 2}
   m_PrefabInternal: {fileID: 185190348}
   m_GameObject: {fileID: 1038897459}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: ea728da1cf35f3d48b881dd0b07c5f0d, type: 2}
   m_CullingMode: 0
@@ -7171,7 +7179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7441239d83fd66438905524a1a20751, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hp: 10
+  hp: 1
   healthBarSlider: {fileID: 1707082474}
 --- !u!114 &1660452884
 MonoBehaviour:

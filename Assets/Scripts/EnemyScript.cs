@@ -188,4 +188,9 @@ public class EnemyScript : MonoBehaviour {
 		mouvements.Script.tableauCases [mouvements.posX, mouvements.posY].SetEtat (EtatCase.Empty);
 	}
 
+	void DestroyThisObject()
+	{
+		Destroy (gameObject);
+	}
+
 }

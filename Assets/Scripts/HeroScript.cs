@@ -15,6 +15,11 @@ public class HeroScript : MonoBehaviour {
 	void Update(){
 	}
 
+	public void KillSelf(){
+		Destroy (gameObject);
+
+	}
+
 
 	// Update is called once per frame
 	void FixedUpdate ()

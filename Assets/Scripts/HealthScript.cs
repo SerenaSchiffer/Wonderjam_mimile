@@ -17,7 +17,7 @@ public class HealthScript : MonoBehaviour {
 
 		if (hp <= 0) 
 		{
-			gameObject.GetComponent<Animator>().SetTrigger ("Die");
+			gameObject.GetComponent<Animator>().SetTrigger("Die");
 		}
 	}
 
