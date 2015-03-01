@@ -54,14 +54,16 @@ public class tireEnemy : MonoBehaviour {
 				{
 					for (int cpt = 0; cpt < arme.distance; cpt++)
 					{
-						if (tableauCourant[hero.mouvements.posX - cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
-						{
-							verif=true;
-						}
-						else
-						{
-							verif=false;
-							break;
+						if(arme.distance!=1){
+							if (tableauCourant[hero.mouvements.posX - cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty)
+							{
+								verif=true;
+							}
+							else
+							{
+								verif=false;
+								break;
+							}
 						}
 					}
 				}
