@@ -6,7 +6,9 @@ public class projectile : MonoBehaviour {
 	// Use this for initialization
 
 	void Start () {
-		Vector2 direction = new Vector2(1, 1);
+		Debug.Log("je suis dans le start");
+
+		Vector2 direction = new Vector2(1, 0);
 	}
 	public void setDirection( int direct) {
 		if(direct==1){
@@ -34,10 +36,10 @@ public class projectile : MonoBehaviour {
 	void FixedUpdate()
 	{
 		// Apply movement to the rigidbody
-		rigidbody2D.velocity = movement;
+		//rigidbody2D.velocity = movement;
 	}
 	void OnCollisionEnter2D()
 	{
-		Destroy(gameObject);
+		//Destroy(gameObject);
 	}
 }

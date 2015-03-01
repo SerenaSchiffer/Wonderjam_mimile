@@ -186,13 +186,20 @@ public class tire : MonoBehaviour {
         return verif;
 
     }
-	//public Rigidbody project;
+	/*public GameObject project;
 
 	
-	/*public void spawnProjectile(HeroScript hero)
+	public void spawnProjectile(HeroScript hero)
 	{
-
-		Instantiate (project);
+		GameObject instanc=
+		Instantiate (project)as GameObject;
+		int position_x, position_y;
+		position_x = hero.mouvements.posX;
+		position_y = hero.mouvements.posY;
+		Vector3 posi = new Vector3 (position_x, position_y, 20);
+		instanc.transform.position = posi;
+		//instanc.transform.position.y = position_y;
+		//instanc.
 	}*/
 	private void attack(EnemyScript cible)
 	{
@@ -247,7 +254,7 @@ public class tire : MonoBehaviour {
             }
             case "boite":{
                 arme.nom="boite";
-                arme.degat=0;
+                arme.degat=5;
                 arme.distance=2;
 			arme.effet="Degat";
                 break;
