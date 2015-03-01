@@ -57,23 +57,28 @@ public class tire : MonoBehaviour {
 				if(compare==1){
 
 				}else{
-				if (compare <= arme.distance)
-	            {
-					 for (int cpt = 1; cpt <= compare; cpt++)
-		                 {
-							
-							if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Trap)
-			                     {
-			                        verif=true;
-			                     }
-			                     else
-			                     {
-			                         verif=false;
-			                         break;
-			                     }
-
-						}
-				}
+					if (compare <= arme.distance)
+		            {
+						 for (int cpt = 1; cpt <= compare; cpt++)
+			                 {
+								
+							if (tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Enemy||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Empty||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.HalfObstacle||tableauCourant[hero.mouvements.posX + cpt, hero.mouvements.posY].GetCase() == EtatCase.Trap)
+				                     {
+				                        verif=true;
+				                     }
+				                     else
+				                     {
+									if (tableauCourant[hero.mouvements.posX + compare, hero.mouvements.posY].GetCase() == EtatCase.Enemy)
+									{
+										verif=true;
+									}else{
+										verif=false;
+										break;
+									}
+				                     }
+								
+							}
+					}
                
                 else{
         
